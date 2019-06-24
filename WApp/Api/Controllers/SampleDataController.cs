@@ -17,7 +17,7 @@ namespace WApp.Controllers
         };
 
         [HttpGet, Route("api/v1/SampleData/WeatherForecasts")]
-        public IEnumerable<WeatherForecast> WeatherForecasts()
+        private IEnumerable<WeatherForecast> WeatherForecasts()
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -27,13 +27,13 @@ namespace WApp.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
         }
-        public class WeatherForecast
+        private class WeatherForecast
         {
             public string DateFormatted { get; set; }
             public int TemperatureC { get; set; }
             public string Summary { get; set; }
 
-            public int TemperatureF
+            private int TemperatureF
             {
                 get
                 {
