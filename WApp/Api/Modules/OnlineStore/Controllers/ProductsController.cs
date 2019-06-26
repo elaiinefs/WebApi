@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +7,7 @@ using WApp.Api.Infraestructure.Data.Entities;
 using WApp.Api.Infraestructure.Data.Queries;
 using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace WApp.Controllers
 {
@@ -29,8 +29,7 @@ namespace WApp.Controllers
         [HttpGet, Route("api/v1/[controller]/List")]
         public List<GetProductsView> List()
         {
-            var products = _context.GetProducts.ToList();
-            return products;
+            return _context.GetProducts.ToList();
         }
         [HttpPost, Route("api/v1/[controller]/Add")]
         public IActionResult Add(Products product)
@@ -41,10 +40,9 @@ namespace WApp.Controllers
                 _context.SaveChanges();
                 return Json(new {status = "Success", product });
             }
-            catch
+            catch (Exception e)
             {
-                _logger.LogError("log error");
-                return ErrorResponse();
+                return ErrorResponse(e);
             }
         }
         [HttpPost, Route("api/v1/[controller]/Update")]
@@ -56,10 +54,9 @@ namespace WApp.Controllers
                 _context.SaveChanges();
                 return Json(new { status = "Success", product });
             }
-            catch
+            catch (Exception e)
             {
-                _logger.LogError("log error");
-                return ErrorResponse();
+                return ErrorResponse(e);
             }
         }
         [HttpGet, Route("api/v1/[controller]/Delete")]
@@ -71,14 +68,14 @@ namespace WApp.Controllers
             _context.SaveChanges();
                 return Json(new { status = "Deactivated" });
             }
-            catch
+            catch (Exception e)
             {
-                _logger.LogError("log error");
-                return ErrorResponse();
+                return ErrorResponse(e);
             }
         }
-        private IActionResult ErrorResponse()
+        private IActionResult ErrorResponse(Exception e)
         {
+            _logger.LogError("log error", e);
             return Json(new { status = "Error", message = Constants.StatusMessage["Error"] });
         }
     }

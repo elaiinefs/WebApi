@@ -55,6 +55,7 @@ namespace WApp.Api.Infraestructure.Data.Entities
         public virtual DbSet<Users> Users { get; set; }
         //Queries
         public DbQuery<GetProductsView> GetProducts { get; set; }
+        public DbQuery<GetOrdersView> GetOrders { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
@@ -566,21 +567,21 @@ namespace WApp.Api.Infraestructure.Data.Entities
 
             modelBuilder.Entity<Orders>(entity =>
             {
-                entity.Property(e => e.CreatedBy).HasMaxLength(50);
+                entity.Property(e => e.CreatedBy);
 
-                entity.Property(e => e.CreatedDate).HasMaxLength(50);
+                entity.Property(e => e.CreatedDate);
 
-                entity.Property(e => e.Customer).HasMaxLength(50);
+                entity.Property(e => e.CustomerId).HasMaxLength(50);
 
                 entity.Property(e => e.Deposit).HasMaxLength(50);
 
                 entity.Property(e => e.Discount).HasMaxLength(50);
 
-                entity.Property(e => e.Employee).HasMaxLength(50);
+                entity.Property(e => e.EmployeeId);
 
                 entity.Property(e => e.Items).HasMaxLength(50);
 
-                entity.Property(e => e.ModifiedBy).HasMaxLength(50);
+                entity.Property(e => e.ModifiedBy);
 
                 entity.Property(e => e.ModifiedDate).HasMaxLength(50);
 
@@ -599,6 +600,8 @@ namespace WApp.Api.Infraestructure.Data.Entities
                 entity.Property(e => e.TaxName).HasMaxLength(50);
 
                 entity.Property(e => e.TaxName2).HasMaxLength(50);
+
+                entity.Property(e => e.VendorId);
             });
 
             modelBuilder.Entity<OrdersProducts>(entity =>
@@ -806,6 +809,10 @@ namespace WApp.Api.Infraestructure.Data.Entities
             modelBuilder.Entity<Status>(entity =>
             {
                 entity.Property(e => e.Name).HasMaxLength(75);
+
+                entity.Property(e => e.Category).HasMaxLength(50);
+
+                entity.Property(e => e.Description).HasMaxLength(50);
             });
 
             modelBuilder.Entity<Supplier>(entity =>
