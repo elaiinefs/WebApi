@@ -591,7 +591,7 @@ namespace WApp.Api.Infraestructure.Data.Entities
 
                 entity.Property(e => e.OrderTotal).HasMaxLength(50);
 
-                entity.Property(e => e.Status).HasMaxLength(50);
+                entity.Property(e => e.StatusId).HasMaxLength(50);
 
                 entity.Property(e => e.TaxAmount).HasMaxLength(50);
 
