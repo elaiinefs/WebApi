@@ -17,6 +17,7 @@ using System;
 using System.Net;
 using System.Collections.Generic;
 using System.Linq;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace WApp
 {
@@ -61,6 +62,8 @@ namespace WApp
             services.AddScoped<IUserManagementService, UserManagementService>();
             services.AddSwaggerGen(c =>
             {
+
+                c.OperationFilter<AuthorizeCheckOperationFilter>();
                 c.SwaggerDoc("v1", new Info
                 {
                     Version = "v1",
@@ -77,7 +80,7 @@ namespace WApp
                     {
                         Name = "ABC",
                         Url = "www.dotnetdetail.net"
-                    },
+                    }
                 });
                 c.AddSecurityDefinition("Bearer",
                 new ApiKeyScheme
@@ -87,9 +90,7 @@ namespace WApp
                     Name = "Authorization",
                     Type = "apiKey"
                 });
-                c.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>> {
-                { "Bearer", Enumerable.Empty<string>() },
-            });
+            
             });
             // Adds a default in-memory implementation of IDistributedCache.
             services.AddDistributedMemoryCache();
