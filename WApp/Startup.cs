@@ -68,19 +68,7 @@ namespace WApp
                 {
                     Version = "v1",
                     Title = "API",
-                    Description = "Test API with ASP.NET Core 3.0",
-                    TermsOfService = "None",
-                    Contact = new Contact()
-                    {
-                        Name = "Dotnet Detail",
-                        Email = "dotnetdetail@gmail.com",
-                        Url = "www.dotnetdetail.net"
-                    },
-                    License = new License
-                    {
-                        Name = "ABC",
-                        Url = "www.dotnetdetail.net"
-                    }
+                    TermsOfService = "None"
                 });
                 c.AddSecurityDefinition("Bearer",
                 new ApiKeyScheme
@@ -125,7 +113,7 @@ namespace WApp
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyAPI");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Main Api");
                 });
             }
             else
