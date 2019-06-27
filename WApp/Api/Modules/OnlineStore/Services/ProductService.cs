@@ -10,12 +10,10 @@ namespace WApp.Api.Modules.OnlineStore.Services
 {
     public class ProductService:IProductService
     {
-        private readonly ILogger _logger;
         private readonly DbObjectContext _context;
 
-        public ProductService(DbObjectContext context, ILogger<ProductService> logger)
+        public ProductService(DbObjectContext context)
         {
-            _logger = logger;
             _context = context;
         }
         public List<GetProductsView> List()
