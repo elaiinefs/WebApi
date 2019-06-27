@@ -20,6 +20,7 @@ using System.Linq;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using WApp.Api.Modules.OnlineStore.Services;
 using WApp.Api.Infraestructure.Core.Services;
+using Microsoft.Extensions.Logging;
 
 namespace WApp
 {
@@ -65,6 +66,7 @@ namespace WApp
             services.AddScoped<IErrorHandlerService, ErrorHandlerService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IStripeService, StripeService>();
             services.AddSwaggerGen(c =>
             {
 
@@ -103,7 +105,7 @@ namespace WApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseAuthentication();
             app.UseSession();
