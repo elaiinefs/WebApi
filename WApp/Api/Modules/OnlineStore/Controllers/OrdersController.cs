@@ -11,6 +11,8 @@ using WApp.Api.Infraestructure.Data.Entities;
 using WApp.Api.Infraestructure.Data.Queries;
 using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
+using WApp.Api.Infraestructure.Core.Services;
+using WApp.Api.Modules.OnlineStore.Services;
 
 namespace WApp.Api.Modules.OnlineStore.Controllers
 {
@@ -18,34 +20,34 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
     [Authorize]
     public class OrdersController : Controller
     {
-
-        private readonly DbObjectContext _context;
         private readonly IConfiguration _config;
         private readonly ILogger _logger;
+        private readonly IOrderService _orderService;
+        private readonly IErrorHandlerService _errorService;
 
-        public OrdersController(DbObjectContext context, IConfiguration config, ILogger<OrdersController> logger)
+        public OrdersController(IConfiguration config, ILogger<OrdersController> logger, IOrderService orderService, IErrorHandlerService errorService)
         {
-            _context = context;
             _config = config;
             _logger = logger;
+            
+            _orderService = orderService;_errorService = errorService;
         }
         [HttpGet, Route("api/v1/[controller]/List")]
         public List<GetOrdersView> List()
         {
-            return _context.GetOrders.ToList();
+            return _orderService.List();
         }
         [HttpPost, Route("api/v1/[controller]/Add")]
         public IActionResult Add(Orders order)
         {
             try
             {
-                _context.Add(order);
-                _context.SaveChanges();
+                _orderService.Add(order);
                 return Json(new { status = "Success", order });
             }
             catch (Exception e)
             {
-                return ErrorResponse(e);
+                return Json(new { status = "Error", message = _errorService.LogError(e) });
             }
         }
         [HttpPost, Route("api/v1/[controller]/Update")]
@@ -53,13 +55,12 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
         {
             try
             {
-                _context.Update(order);
-                _context.SaveChanges();
+                _orderService.Update(order);
                 return Json(new { status = "Success", order });
             }
             catch (Exception e)
             {
-                return ErrorResponse(e);
+                return Json(new { status = "Error", message = _errorService.LogError(e) });
             }
         }
         [HttpGet, Route("api/v1/[controller]/Delete")]
@@ -67,21 +68,14 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
         {
             try
             {
-                var order = _context.Orders.First(o => o.Id == orderId);
-                order.StatusId = (int)Constants.StatusType.inactive;
-                _context.SaveChanges();
+                _orderService.Delete(orderId);
                 return Json(new { status = "Deleted" });
             }
             catch (Exception e)
             {
-                return ErrorResponse(e);
+                return Json(new { status = "Error", message = _errorService.LogError(e) });
             }
         }
-
-        private IActionResult ErrorResponse(Exception e)
-        {
-            _logger.LogError("log error", e);
-            return Json(new { status = "Error", message = Constants.StatusMessage["Error"] });
-        }
+        
     }
 }

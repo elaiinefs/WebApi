@@ -9,30 +9,47 @@ using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Services;
 using System;
+using Stripe;
+using WApp.Api.Modules.OnlineStore.Models;
 
-namespace WApp.Controllers
+namespace WApp.Api.Modules.OnlineStore.Controllers
 {
     [Route("api/v1/[controller]")]
     [Authorize]
-    public class ProductsController : Controller
+    public class CardsController : Controller
     {
         private readonly DbObjectContext _context;
         private readonly IConfiguration _config;
         private readonly ILogger _logger;
         private readonly IErrorHandlerService _errorService;
 
-        public ProductsController(DbObjectContext context, IConfiguration config, ILogger<ProductsController> logger, IErrorHandlerService errorService)
+        public CardsController(DbObjectContext context, IConfiguration config, ILogger<CardsController> logger, IErrorHandlerService errorService)
         {
             _context = context;
             _config = config;
             _logger = logger;
             _errorService = errorService;
         }
-        
-        [HttpGet, Route("api/v1/[controller]/List")]
-        public List<GetProductsView> List()
+
+        private CreditCardOptions CreateCard(Payment paymentInfo)
         {
-            return _context.GetProducts.ToList();
+            Stripe.CreditCardOptions card = new Stripe.CreditCardOptions();
+            card.Name = paymentInfo.CardOwnerFirstName + " " + paymentInfo.CardOwnerLastName;
+            card.Number = paymentInfo.CardNumber;
+            card.ExpYear = paymentInfo.ExpirationYear;
+            card.ExpMonth = paymentInfo.ExpirationMonth;
+            card.Cvc = paymentInfo.CVV2;
+            return card;
+        }
+
+        private Token CreateToken(CreditCardOptions card)
+        {
+            //Assign Card to Token Object and create Token  
+            Stripe.TokenCreateOptions token = new Stripe.TokenCreateOptions();
+            token.Card = card;
+            Stripe.TokenService serviceToken = new Stripe.TokenService();
+            Stripe.Token newToken = serviceToken.Create(token);
+            return newToken;
         }
         [HttpPost, Route("api/v1/[controller]/Add")]
         public IActionResult Add(Products product)
@@ -41,7 +58,7 @@ namespace WApp.Controllers
             {
                 _context.Add(product);
                 _context.SaveChanges();
-                return Json(new {status = "Success", product });
+                return Json(new { status = "Success", product });
             }
             catch (Exception e)
             {
@@ -65,10 +82,11 @@ namespace WApp.Controllers
         [HttpGet, Route("api/v1/[controller]/Delete")]
         public IActionResult Deactivate(int productId)
         {
-            try {
-            var product = _context.Products.First(p => p.Id == productId);
-            product.StatusId = (int)Constants.StatusType.inactive;
-            _context.SaveChanges();
+            try
+            {
+                var product = _context.Products.First(p => p.Id == productId);
+                product.StatusId = (int)Constants.StatusType.inactive;
+                _context.SaveChanges();
                 return Json(new { status = "Deactivated" });
             }
             catch (Exception e)

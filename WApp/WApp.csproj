@@ -21,6 +21,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Stripe.net" Version="27.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
@@ -39,8 +40,6 @@
     <Folder Include="Api\Infraestructure\Core\Controllers\v1\" />
     <Folder Include="Api\Modules\OnlineStore\Data\" />
     <Folder Include="Api\Modules\OnlineStore\Repositories\" />
-    <Folder Include="Api\Modules\OnlineStore\Services\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

@@ -18,6 +18,8 @@ using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using WApp.Api.Modules.OnlineStore.Services;
+using WApp.Api.Infraestructure.Core.Services;
 
 namespace WApp
 {
@@ -60,6 +62,8 @@ namespace WApp
 
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
             services.AddScoped<IUserManagementService, UserManagementService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IErrorHandlerService, ErrorHandlerService>();
             services.AddSwaggerGen(c =>
             {
 
