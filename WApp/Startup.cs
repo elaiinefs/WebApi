@@ -62,8 +62,9 @@ namespace WApp
 
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
             services.AddScoped<IUserManagementService, UserManagementService>();
-            services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IErrorHandlerService, ErrorHandlerService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddSwaggerGen(c =>
             {
 

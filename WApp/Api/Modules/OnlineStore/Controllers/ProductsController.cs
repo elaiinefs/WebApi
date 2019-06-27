@@ -9,6 +9,7 @@ using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Services;
 using System;
+using WApp.Api.Modules.OnlineStore.Services;
 
 namespace WApp.Controllers
 {
@@ -16,31 +17,30 @@ namespace WApp.Controllers
     [Authorize]
     public class ProductsController : Controller
     {
-        private readonly DbObjectContext _context;
         private readonly IConfiguration _config;
         private readonly ILogger _logger;
         private readonly IErrorHandlerService _errorService;
+        private readonly IProductService _productService;
 
-        public ProductsController(DbObjectContext context, IConfiguration config, ILogger<ProductsController> logger, IErrorHandlerService errorService)
+        public ProductsController(IConfiguration config, ILogger<ProductsController> logger, IErrorHandlerService errorService, IProductService productService)
         {
-            _context = context;
             _config = config;
             _logger = logger;
             _errorService = errorService;
+            _productService = productService;
         }
         
         [HttpGet, Route("api/v1/[controller]/List")]
         public List<GetProductsView> List()
         {
-            return _context.GetProducts.ToList();
+            return _productService.List();
         }
         [HttpPost, Route("api/v1/[controller]/Add")]
         public IActionResult Add(Products product)
         {
             try
             {
-                _context.Add(product);
-                _context.SaveChanges();
+                _productService.Add(product);
                 return Json(new {status = "Success", product });
             }
             catch (Exception e)
@@ -53,8 +53,7 @@ namespace WApp.Controllers
         {
             try
             {
-                _context.Update(product);
-                _context.SaveChanges();
+                _productService.Update(product);
                 return Json(new { status = "Success", product });
             }
             catch (Exception e)
@@ -63,13 +62,11 @@ namespace WApp.Controllers
             }
         }
         [HttpGet, Route("api/v1/[controller]/Delete")]
-        public IActionResult Deactivate(int productId)
+        public IActionResult Delete(int productId)
         {
             try {
-            var product = _context.Products.First(p => p.Id == productId);
-            product.StatusId = (int)Constants.StatusType.inactive;
-            _context.SaveChanges();
-                return Json(new { status = "Deactivated" });
+                _productService.Delete(productId);
+                return Json(new { status = "Deleted" });
             }
             catch (Exception e)
             {
