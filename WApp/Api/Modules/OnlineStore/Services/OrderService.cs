@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WApp.Api.Infraestructure.Data.Entities;
 using WApp.Api.Infraestructure.Data.Queries;
 using WApp.Api.Modules;
+using WApp.Api.Modules.OnlineStore.Interfaces;
 using WApp.Api.Modules.OnlineStore.Models;
 
 namespace WApp.Api.Modules.OnlineStore.Services

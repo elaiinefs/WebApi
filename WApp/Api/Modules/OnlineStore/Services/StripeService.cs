@@ -2,6 +2,7 @@
 using Stripe;
 using System.Linq;
 using WApp.Api.Infraestructure.Data.Entities;
+using WApp.Api.Modules.OnlineStore.Interfaces;
 using WApp.Api.Modules.OnlineStore.Models;
 
 namespace WApp.Api.Modules.OnlineStore.Services
@@ -63,5 +64,42 @@ namespace WApp.Api.Modules.OnlineStore.Services
             return charge;
         }
         #endregion
+
+        #region Customer
+        public Customer CreateCustomer(Token newToken, Payment paymentInfo, string customerId)
+        {
+            var service = new CustomerService();
+            Customer stripeCustomer;
+            if (customerId != null)
+            {
+                stripeCustomer = service.Get(customerId);
+            }
+            else
+            {
+                CustomerCreateOptions myCustomer = new CustomerCreateOptions();
+                myCustomer.Email = paymentInfo.Buyer_Email;
+                var customerService = new CustomerService();
+                stripeCustomer = customerService.Create(myCustomer);
+            }
+            return stripeCustomer;
+        }
+
+        public CustomerService UpdateCustomer(Users user)
+        {
+            var options = new CustomerUpdateOptions
+            {
+                Email = user.Email,
+                Description = "Zaraii Pay Customer",
+                //Metadata = new Dictionary<string, string>
+                //{
+                //    { "order_id", "6735" },
+                //},
+            };
+            var customerService = new CustomerService();
+            customerService.Update(user.StripeId, options);
+            return customerService;
+        }
+        #endregion
+
     }
 }

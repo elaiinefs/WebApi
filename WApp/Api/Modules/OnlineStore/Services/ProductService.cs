@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WApp.Api.Infraestructure.Data.Entities;
 using WApp.Api.Infraestructure.Data.Queries;
+using WApp.Api.Modules.OnlineStore.Interfaces;
 
 namespace WApp.Api.Modules.OnlineStore.Services
 {

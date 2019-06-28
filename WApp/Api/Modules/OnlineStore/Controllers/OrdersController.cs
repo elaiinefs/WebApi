@@ -12,7 +12,7 @@ using WApp.Api.Infraestructure.Data.Queries;
 using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Services;
-using WApp.Api.Modules.OnlineStore.Services;
+using WApp.Api.Modules.OnlineStore.Interfaces;
 
 namespace WApp.Api.Modules.OnlineStore.Controllers
 {

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using WApp.Api.Infraestructure.Data.Entities;
 using WApp.Api.Infraestructure.Data.Queries;
 
-namespace WApp.Api.Modules.OnlineStore.Services
+namespace WApp.Api.Modules.OnlineStore.Interfaces
 {
     public interface IProductService
     {

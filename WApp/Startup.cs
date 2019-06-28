@@ -18,6 +18,7 @@ using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using WApp.Api.Modules.OnlineStore.Interfaces;
 using WApp.Api.Modules.OnlineStore.Services;
 using WApp.Api.Infraestructure.Core.Services;
 using Microsoft.Extensions.Logging;
@@ -64,9 +65,12 @@ namespace WApp
             services.AddScoped<IAuthenticateService, TokenAuthenticationService>();
             services.AddScoped<IUserManagementService, UserManagementService>();
             services.AddScoped<IErrorHandlerService, ErrorHandlerService>();
+
+            services.AddScoped<ICompanyService, CompanyService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IStripeService, StripeService>();
+            services.AddScoped<IUserService, UserService>();
             services.AddSwaggerGen(c =>
             {
 

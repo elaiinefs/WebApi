@@ -9,7 +9,7 @@ using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Services;
 using System;
-using WApp.Api.Modules.OnlineStore.Services;
+using WApp.Api.Modules.OnlineStore.Interfaces;
 
 namespace WApp.Controllers
 {

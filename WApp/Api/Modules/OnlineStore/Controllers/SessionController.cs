@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Services;
-using WApp.Api.Modules.OnlineStore.Services;
+using WApp.Api.Modules.OnlineStore.Interfaces;
 
 namespace WApp.Api.Modules.OnlineStore.Controllers
 {
