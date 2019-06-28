@@ -56,7 +56,7 @@ namespace WApp.Api.Modules.OnlineStore.Services
         #endregion
 
         #region Charge
-        private Charge CreateCharge(ChargeCreateOptions options)
+        public Charge CreateCharge(ChargeCreateOptions options)
         {
             var service = new ChargeService();
             Charge charge = service.Create(options);// This will do the Payment
