@@ -31,5 +31,27 @@ namespace WApp.Api.Modules.OnlineStore.Services
             _context.SaveChanges();
             return product;
         }
+        public string SetName(CompInfo company)
+        {
+            var businessName = "";
+            if (company != null)
+            {
+                businessName = company.Name + "- ";
+            }
+            return businessName;
+        }
+        public string SetAddress(CompInfo company)
+        {
+            var businessAddress = "";
+            if (company != null)
+            {
+                businessAddress = company.Addr + " " +
+                                  company.City + ", " +
+                                  company.State + " " +
+                                  company.Zcode +
+                                  ", Phone: " + company.Phone;
+            }
+            return businessAddress;
+        }
     }
 }

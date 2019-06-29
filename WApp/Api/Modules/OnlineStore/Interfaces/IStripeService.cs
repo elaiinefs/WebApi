@@ -6,13 +6,11 @@ namespace WApp.Api.Modules.OnlineStore.Interfaces
 {
     public interface IStripeService
     {
-        string GetKey(string userEmail);
+        string SetKey(string userEmail);
 
-        void SetKey(string key);
+        Token CreateCardToken(Payment paymentInfo);
 
-        CreditCardOptions CreateCard(Payment paymentInfo);
-
-        Token CreateToken(CreditCardOptions card);
+        ChargeCreateOptions Options(int amount, int? currency, string customerEmail, string customerId, string businessName, string businessAddress);
 
         Charge CreateCharge(ChargeCreateOptions options);
 

@@ -8,6 +8,7 @@ namespace WApp.Api.Modules.OnlineStore.Interfaces
     public interface IOrderService
     {
         List<GetOrdersView> List();
+        Orders Create(int customer, string amount, string date);
         Orders Add(Orders order);
         Orders Update(Orders order);
         Orders Delete(int orderId);

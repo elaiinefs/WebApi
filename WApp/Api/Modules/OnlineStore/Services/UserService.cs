@@ -42,6 +42,7 @@ namespace WApp.Api.Modules.OnlineStore.Services
                 newUser.Business = 1.ToString();
                 newUser.Status = "Active";
                 newUser.StripeId = stripeCustomerId;
+                Add(newUser);
                 return newUser;
             }
             else
@@ -56,6 +57,7 @@ namespace WApp.Api.Modules.OnlineStore.Services
                 user.Business = (Convert.ToInt32(user.Business) + 1).ToString();//number of orders
                 user.Status = "Active";
                 //newOrder.Customer = user.Id.ToString();
+                Update(user);
                 _stripeService.UpdateCustomer(user);
                 return user;
             }

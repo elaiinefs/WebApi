@@ -18,23 +18,21 @@ namespace WApp.Api.Modules.OnlineStore.Services
             _config = config;
         }
         #region Key
-        public string GetKey(string userEmail)
+        public string SetKey(string userEmail)
         {
             var environment = _config.GetSection("testingStatus").Value;
             if (environment == "")
             {
                 environment = "test";
             }
-            return _context.Keys.Where(k => k.Name == userEmail && k.Status == environment).FirstOrDefault().Value;
-        }
-        public void SetKey(string key)
-        {
-            StripeConfiguration.ApiKey=key;
+            var key = _context.Keys.Where(k => k.Name == userEmail && k.Status == environment).FirstOrDefault().Value;
+            StripeConfiguration.ApiKey = key;
+            return key;
         }
         #endregion
 
         #region Card
-        public CreditCardOptions CreateCard(Payment paymentInfo)
+        public Token CreateCardToken(Payment paymentInfo)
         {
             Stripe.CreditCardOptions card = new Stripe.CreditCardOptions();
             card.Name = paymentInfo.CardOwnerFirstName + " " + paymentInfo.CardOwnerLastName;
@@ -42,10 +40,11 @@ namespace WApp.Api.Modules.OnlineStore.Services
             card.ExpYear = paymentInfo.ExpirationYear;
             card.ExpMonth = paymentInfo.ExpirationMonth;
             card.Cvc = paymentInfo.CVV2;
-            return card;
+            CreateToken(card);
+            return CreateToken(card);
         }
 
-        public Token CreateToken(CreditCardOptions card)
+        private Token CreateToken(CreditCardOptions card)
         {
             //Assign Card to Token Object and create Token  
             Stripe.TokenCreateOptions token = new Stripe.TokenCreateOptions();
@@ -57,6 +56,20 @@ namespace WApp.Api.Modules.OnlineStore.Services
         #endregion
 
         #region Charge
+        public ChargeCreateOptions Options (int amount, int? currency, string customerEmail, string customerId, string businessName, string businessAddress)
+        {
+            var options = new ChargeCreateOptions
+            {
+                Amount = amount,
+                Currency = currency == 1 ? "ILS" : "USD",
+                ReceiptEmail = customerEmail,
+                Description = businessName + "\n" + businessAddress,
+                CustomerId = customerId,
+                //ApplicationFeeAmount = Convert.ToInt32(amountTotal * .01),
+                //Description = Convert.ToString(paymentInfo.TransactionId), //Optional  
+            };
+            return options;
+        }
         public Charge CreateCharge(ChargeCreateOptions options)
         {
             var service = new ChargeService();

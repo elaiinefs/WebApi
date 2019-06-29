@@ -11,7 +11,9 @@ namespace WApp.Api.Modules.OnlineStore
         {
             active = 1,
             inactive = 2,
-            soldOut = 3
+            soldOut = 3,
+            paid = 7,
+            cart = 9
         }
     }
 }

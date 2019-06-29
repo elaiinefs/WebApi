@@ -16,7 +16,7 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
         }
         public void SetStripeKey(string BusinessEmail)
         {
-            var key = _stripeService.GetKey(BusinessEmail);
+            var key = _stripeService.SetKey(BusinessEmail);
             _stripeService.SetKey(key);
         }
 

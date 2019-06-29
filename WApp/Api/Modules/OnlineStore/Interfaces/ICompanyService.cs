@@ -7,5 +7,7 @@ namespace WApp.Api.Modules.OnlineStore.Interfaces
         CompInfo GetCompany(string companyId);
         CompInfo Add(CompInfo company);
         CompInfo Update(CompInfo company);
+        string SetName(CompInfo company);
+        string SetAddress(CompInfo company);
     }
 }

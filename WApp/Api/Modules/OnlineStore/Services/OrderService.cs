@@ -25,6 +25,16 @@ namespace WApp.Api.Modules.OnlineStore.Services
         {
             return _context.GetOrders.ToList();
         }
+        public Orders Create(int customer, string amount, string date)
+        {
+            Orders newOrder = new Orders();
+            newOrder.CustomerId = customer;
+            newOrder.OrderTotal = amount;
+            newOrder.CreatedDate = date;
+            newOrder.StatusId = (int)Constants.StatusType.paid;
+            Add(newOrder);
+            return newOrder;
+        }
         public Orders Add(Orders order)
         {
                 _context.Add(order);
