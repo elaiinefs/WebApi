@@ -5,21 +5,26 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WApp.Api.Infraestructure.Data.Models;
+using WApp.Api.Modules.OnlineStore.Interfaces;
+using WApp.Api.Modules.OnlineStore.Models;
 
 namespace WApp.Api.Infraestructure.Core.Authentication
 {
-    [Route("api/[controller]")]
+    [Route("api/v1")]
     [ApiController]
     public class AuthorizationController : Controller
     {
         private readonly IAuthenticateService _authService;
-        public AuthorizationController(IAuthenticateService authService)
+        private readonly IStripeService _stripeService;
+
+        public AuthorizationController(IAuthenticateService authService, IStripeService stripeService)
         {
             _authService = authService;
+            _stripeService = stripeService;
         }
         #region Auth
         [AllowAnonymous]
-        [HttpPost, Route("api/Authorize")]
+        [HttpPost, Route("api/v1/RequestToken")]
         public ActionResult RequestToken([FromBody] TokenRequest request)
         {
             if (!ModelState.IsValid)
@@ -37,14 +42,27 @@ namespace WApp.Api.Infraestructure.Core.Authentication
 
         }
         #endregion
-        //[HttpGet, Route("api/v1/Authorization/Authorize")]
-        //public IRestResponse Authorize()
-        //{
-        //    var client = new RestClient("https://zaraii.auth0.com/oauth/token");
-        //    var request = new RestRequest(Method.POST);
-        //    request.AddHeader("content-type", "application/json");
-        //    request.AddParameter("application/json", "{\"client_id\":\"ru8txMkO0jwLRfe7z97qtWcZvIGPkqCS\",\"client_secret\":\"AC0QrmYH474VcJBMpAUTrhaDeqfMHtApRkwZl-9zJHCWg3jMJzP38b89uFbBhnNI\",\"audience\":\"https://wapp-api\",\"grant_type\":\"client_credentials\"}", ParameterType.RequestBody);
-        //    IRestResponse response = client.Execute(request);
-        //}
+        #region Stripe
+        [AllowAnonymous]
+        [HttpPost, Route("api/v1/Authorize")]
+        public ActionResult Stripe([FromBody]Payment paymentInfo)
+        {
+            SetStripeKey(paymentInfo.Buyer_Email);
+            TokenRequest request = new TokenRequest();
+            request.Username = paymentInfo.Buyer_Email;
+            string token;
+            if (_authService.IsAuthenticated(request, out token))
+            {
+                return Ok(token);
+            }
+            return BadRequest("Invalid Request");
+        }
+        [HttpPost, Route("api/v1/SetStripeKey")]
+        public void SetStripeKey(string BusinessEmail)
+        {
+            var key = _stripeService.SetKey(BusinessEmail);
+            _stripeService.SetKey(key);
+        }
+        #endregion
     }
 }

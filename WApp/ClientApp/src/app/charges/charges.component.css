@@ -1,0 +1,7 @@
+.btn-cust-primary {
+  background-color: rgba(55,215,222,.7);
+  color: #fff;
+}
+ui-paginator-page ui-paginator-element ui-state-default ui-corner-all ui-state-active ng-star-inserted {
+  background-color: #289292 !important;
+}

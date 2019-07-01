@@ -1,0 +1,75 @@
+/****** loader ********/
+.wrapper-ldg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container-ldg {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px 0;
+  height: 400px;
+  text-align: center;
+}
+.c{
+  height:20px;
+  width: 20px;
+  position: relative;
+  float: left; 
+  margin-left:6px; 
+}
+.c::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #3BAFB3;
+  animation: c 1s infinite ease;
+}
+.c2::before{
+  animation-delay: .1s;
+}
+
+.c3::before{
+  animation-delay: .2s;
+}
+.c4::before{
+  animation-delay: .3s;
+}
+.c5::before{
+  animation-delay: .4s;
+}
+.c6::before{
+  animation-delay: .5s;
+}
+.c7::before{
+  animation-delay: .6s;
+}
+.c8::before{
+  animation-delay: .7s;
+}
+.c9::before{
+  animation-delay: .8s;
+}
+
+@keyframes c{
+  0%{
+    transform: scale(0);
+    opacity: .1;
+    background: #e6ffe6;
+  }
+  50% {
+    transform: scale(1);
+    opacity: .5;
+    background: #37D7DE;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+    background: #3ADFE6;
+  }
+}

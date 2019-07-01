@@ -1,0 +1,65 @@
+<h1>Orders</h1>
+
+<p *ngIf="!orders"><em>Loading...</em></p>
+<p-table #dtt [value]="orders" [paginator]="true" [rows]="10" [responsive]="true" [globalFilterFields]="['orderTotal','customer','orderTotal','status','createdBy']">
+  <ng-template pTemplate="caption">
+    <div style="text-align: right">
+      <i class="fa fa-search" style="margin: 4px 4px 0 0"></i>
+      <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dtt.filterGlobal($event.target.value, 'contains')" style="width: auto">
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Order Number</th>
+      <th>Created Date</th>
+      <th>Customer</th>
+      <th>Order Total</th>
+      <th>Status</th>
+      <th>Tax Amount</th>
+      <th>Tax Amount 2</th>
+      <th>Created By</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-order>
+    <tr [pSelectableRow]="rowData">
+      <td>{{ order.orderNumber }}</td>
+      <td>{{ order.createdDate }}</td>
+      <td>{{ order.customer }}</td>
+      <td>{{ order.orderTotal }}</td>
+      <td>{{ order.status }}</td>
+      <td>{{ order.taxAmount }}</td>
+      <td>{{ order.taxAmount2 }}</td>
+      <td>{{ order.createdBy }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<!--<table class='table table-striped' *ngIf="orders">
+  <thead>
+    <tr>
+      <th>Order Number</th>
+      <th>Created Date</th>
+      <th>Customer</th>
+      <th>Order Total</th>
+      <th>Status</th>
+      <th>Tax Amount</th>
+      <th>Tax Amount 2</th>
+      <th>Created By</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.orderNumber }}</td>
+      <td>{{ order.createdDate }}</td>
+      <td>{{ order.customer }}</td>
+      <td>{{ order.orderTotal }}</td>
+      <td>{{ order.status }}</td>
+      <td>{{ order.taxAmount }}</td>
+      <td>{{ order.taxAmount2 }}</td>
+      <td>{{ order.createdBy }}</td>
+
+
+    </tr>
+  </tbody>
+</table>-->

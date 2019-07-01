@@ -1,18 +1,115 @@
-.col-sm img {
-  width: 200px;
-  height: 200px;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #322d28;
 }
 
-.jumbotron {
-  background: #222 url(https://images.unsplash.com/photo-1490380169520-0a4b88d52565?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&s=a800618e01707bb9265bee445b736a37) center center no-repeat;
-  background-size: cover;
+header.top-bar h1 {
+  font-family: "Montserrat", sans-serif;
 }
-#intro {
-  /*background: url("https://www.annuairebiledi.com/img/content/home-slide-img5.jpg")no-repeat center center fixed;*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  width:100%;
+
+main {
+  margin-top: 15rem;
+  min-height: calc(100vh - 107px);
+  margin: auto;
 }
+
+  /*main .inner-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }*/
+
+  .num {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: .9em;
+  }
+
+.additional-info h5 {
+  font-size: .8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #289292;
+}
+.invoice {
+  /*margin-top: -69px;*/
+  margin-bottom: 15px;
+  /*padding-right: 22px;
+  padding-left: 15px;*/
+}
+.secondary-btn-c {
+  background-color: white;
+  border: solid #289292 3px;
+  color: #289292;
+}
+#printable-invoice {
+  margin-top: 15px;
+}
+.signature-header {
+  font-size: .8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.signature-section {
+  border-bottom: solid 2px black;
+  padding-bottom: 60px;
+}
+.alerts-div {
+  margin-bottom: 15px;
+  padding-right: 7px;
+  color: #663399;
+}
+.order-row {
+  margin: 60px 0 20px 0
+}
+@media (max-width: 767px) {
+  .hide-small {
+    display: none;
+  }
+  main {
+    margin-top: 0;
+  }
+  .tax-left {
+    padding-right: 0;
+  }
+  .tax-right {
+    padding-left: 0;
+  }
+  .alerts-div {
+    padding-right: 0;
+  }
+  input.form-control {
+    font-size: 12px;
+  }
+  a,label {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .orders-row {
+    margin: 0 0 20px 0
+  }
+  .body-content {
+    padding-top: 0;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  .chart-card-body .form-group h5 {
+    padding: 1.25rem;
+  }
+  .chart-card-body {
+    padding: 0;
+  }
+}
+

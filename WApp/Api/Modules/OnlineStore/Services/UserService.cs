@@ -22,6 +22,13 @@ namespace WApp.Api.Modules.OnlineStore.Services
             _config = config;
             _stripeService = stripeService;
         }
+
+        public Users GetUserByEmail(string email)
+        {
+            return _context.Users.Where(u => u.Email == email && email != null && email != "").FirstOrDefault();
+
+        }
+
         #region Customer
         public Users GetCustomer(string phoneNumber)
         {

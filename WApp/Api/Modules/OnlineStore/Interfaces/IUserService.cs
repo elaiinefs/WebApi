@@ -10,6 +10,8 @@ namespace WApp.Api.Modules.OnlineStore.Interfaces
 {
     public interface IUserService
     {
+        Users GetUserByEmail(string email);
+
         Users GetCustomer(string phoneNumber);
 
         Users CreateUpdateCustomer(Token newToken, Payment paymentInfo, string customerId, Users user, string stripeCustomerId);

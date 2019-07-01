@@ -1,0 +1,24 @@
+.btn-success {
+  background-color: #289292;
+  border-color: #237f7f;
+}
+
+  .btn-success:hover {
+    background-color: #237f7f;
+    border-color: #1e6c6c;
+  }
+
+  .btn-success:active:focus {
+    background-color: #1e6c6c;
+    border-color: #195a5a;
+  }
+.req-fld {
+  content: "*";
+  position: absolute;
+  margin-right: 10px;
+  color: #c90000;
+  font-size: 25px;
+  font-weight: 600;
+  top: -3px;
+  left: 3px;
+}

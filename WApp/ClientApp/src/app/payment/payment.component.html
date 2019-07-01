@@ -1,0 +1,150 @@
+<!--Order Section-->
+<div class="row orders-row">
+  <div class="col-12">
+    <div class="card card-default">
+      <div class="card-header">
+        <h4 class="card-title text-center">
+          Order Details
+        </h4>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="form-group">
+            <label for="cardNumber">
+              Order Details
+            </label>
+            <div class="input-group">
+              <div class="col-6">
+                <span class="hide-small">Sub Total</span>
+                <div class="col-12">
+                  <span class="req-fld">*</span>
+                  <input type="text" class="form-control" placeholder="Total ($)"
+                         required (change)="calculateTotal($event)" type="number" [(ngModel)]="subTotal" maxlength="150" />
+                </div>
+              </div>
+              <div class="col-3 tax-left">
+                <span class="hide-small">State Tax (%)</span>
+                <input type="text" class="form-control" placeholder="state"
+                       required (change)="calculateTotal($event)" type="number" [(ngModel)]="tax1" maxlength="150"/>
+              </div>
+              <div class="col-3 tax-right">
+                <span class="hide-small">Mun Tax (%)</span>
+                <input type="text" class="form-control" placeholder="city"
+                       required (change)="calculateTotal($event)" type="number" [(ngModel)]="tax2" maxlength="150"/>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cardNumber">
+              Contact Information
+            </label>
+            <div class="input-group">
+              <div class="col-6">
+                <input type="text" class="form-control" placeholder="Email"
+                       required type="email" [(ngModel)]="uEmail" maxlength="150" />
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control" placeholder="Phone"
+                       required type="number" [(ngModel)]="uPhone" maxlength="50" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <div class="p-2">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active">
+            <a href="#"><label class="badge pull-right" style="font-size: 24px"><span class="glyphicon glyphicon-usd">$</span>{{total}}</label> Order Total </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Payment Section-->
+<div class="row" style="margin:20px 0 0 0">
+  <div class="col-12">
+    <div class="card card-default">
+      <div class="card-header">
+        <h4 class="card-title text-center">
+          Payment Details
+        </h4>
+        <a class="pull-right" (click)="clearCardFields()" href="#">Clear Card Fields</a>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="form-group">
+            <label for="cardNumber">
+              CARD NUMBER
+            </label>
+            <div class="input-group">
+              <div class="col-12"><span class="req-fld">*</span>
+                <input (change)="fillCardData($event)" type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number / Scan Card Here"
+                       required [(ngModel)]="cNumber" />
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cardNumber">
+              CARD HOLDER'S NAME
+            </label>
+            <div class="input-group">
+              <div class="col-12"><span class="req-fld">*</span>
+                <input type="text" class="form-control" id="cardOwnerFirstN" placeholder="Card Holder's Full Name"
+                       required type="text" [(ngModel)]="uFirst" />
+              </div>
+              <!--<div class="col-6">
+                <input type="text" class="form-control" id="cardOwnerLastN" placeholder="Card Holder's Last Name"
+                       required type="text" [(ngModel)]="uLast" />
+              </div>-->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-7 col-md-7">
+              <div class="form-group">
+                <label for="expityMonth">
+                  EXPIRY DATE
+                </label>
+                <div class="col-xs-6 col-lg-6 pl-ziro"><span class="req-fld">*</span>
+                  <input type="text" class="form-control" id="expityMonth" placeholder="MM" required type="number" [(ngModel)]="expMonth" />
+                </div>
+                <div class="col-xs-6 col-lg-6 pl-ziro"><span class="req-fld">*</span>
+                  <input type="text" class="form-control" id="expityYear" placeholder="YY" required type="number" [(ngModel)]="expYear" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-5 col-md-5 pull-right">
+              <div class="form-group">
+                <label for="cvCode">
+                  CV CODE
+                </label>
+                <div class="col-12">
+                  <span class="req-fld">*</span>
+                  <input type="password" class="form-control" id="cvCode" placeholder="CV" required type="number" [(ngModel)]="cardCVV" />
+                </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <div class="p-2">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active">
+            <a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>{{total}}</span> Payment Total</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pull-right">
+      <input readonly="readonly" [(ngModel)]="sMessage" style="color: #06d85f; background-color: transparent; text-align: center; width: 100%; font-size: 18px; border: none;" />
+    </div>
+    <button class="btn btn-success btn-lg btn-block" (click)="payOrder(total,cNumber,expYear,expMonth,cardCVV,uPhone,uFirst,uLast,uEmail);isClickedOnce = true">{{payStatus}}</button>
+    <br />
+
+  </div>
+</div>

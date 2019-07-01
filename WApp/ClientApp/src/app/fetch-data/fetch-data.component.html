@@ -7,18 +7,18 @@
 <table class='table table-striped' *ngIf="forecasts">
   <thead>
     <tr>
-      <th>SKU</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Type</th>
+      <th>Date</th>
+      <th>Temp. (C)</th>
+      <th>Temp. (F)</th>
+      <th>Summary</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let product of products">
-      <td>{{ product.Sku }}</td>
-      <td>{{ product.Desc }}</td>
-      <td>{{ product.Price }}</td>
-      <td>{{ product.Type }}</td>
+    <tr *ngFor="let forecast of forecasts">
+      <td>{{ forecast.dateFormatted }}</td>
+      <td>{{ forecast.temperatureC }}</td>
+      <td>{{ forecast.temperatureF }}</td>
+      <td>{{ forecast.summary }}</td>
     </tr>
   </tbody>
 </table>

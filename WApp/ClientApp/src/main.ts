@@ -15,6 +15,7 @@ const providers = [
 if (environment.production) {
   enableProdMode();
 }
-
+environment.production = true;
+enableProdMode();
 platformBrowserDynamic(providers).bootstrapModule(AppModule)
   .catch(err => console.log(err));

@@ -1,0 +1,36 @@
+<h1>Users</h1>
+
+<p *ngIf="!users"><em>Loading...</em></p>
+
+<p-table #dt [value]="users" [paginator]="true" [rows]="10" [sortField]="['email']" [sortOrder]="-1" [globalFilterFields]="['phoneNumber','email','fName','lName','modifiedDate','numberOfOrders','createdDate','status']">
+  <ng-template pTemplate="caption">
+    <div style="text-align: right">
+      <i class="fa fa-search" style="margin: 4px 4px 0 0"></i>
+      <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width: auto">
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+  <tr>
+    <th>Phone Number</th>
+    <th width="200px">Email</th>
+    <th>Full Name</th>
+    <!--<th>Last Name</th>-->
+    <th>Modified Date</th>
+    <th>Number Of Orders</th>
+    <th>createdDate</th>
+    <th>Status</th>
+  </tr>
+  </ng-template>
+    <ng-template pTemplate="body" let-rowData let-user>
+      <tr [pSelectableRow]="rowData">
+        <td>{{ user.phoneNumber }}</td>
+        <td width="200px">{{ user.email }}</td>
+        <td>{{ user.fName }} {{ user.lName }}</td>
+        <!--<td>{{ user.lName }}</td>-->
+        <td>{{ user.modifiedDate }}</td>
+        <td>{{ user.numberOfOrders }}</td>
+        <td>{{ user.createdDate }}</td>
+        <td>{{ user.status }}</td>
+      </tr>
+    </ng-template>
+</p-table>
