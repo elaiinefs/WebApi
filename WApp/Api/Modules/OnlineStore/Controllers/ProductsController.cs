@@ -30,12 +30,12 @@ namespace WApp.Controllers
             _productService = productService;
         }
         
-        [HttpGet, Route("api/v1/[controller]/List")]
+        [HttpGet, Route("List")]
         public List<GetProductsView> List()
         {
             return _productService.List();
         }
-        [HttpPost, Route("api/v1/[controller]/Add")]
+        [HttpPost, Route("Add")]
         public IActionResult Add(Products product)
         {
             try
@@ -48,7 +48,7 @@ namespace WApp.Controllers
                 return Json(new { status = "Error", message = _errorService.LogError(e) });
             }
         }
-        [HttpPost, Route("api/v1/[controller]/Update")]
+        [HttpPost, Route("Update")]
         public IActionResult Update(Products product)
         {
             try
@@ -61,7 +61,7 @@ namespace WApp.Controllers
                 return Json(new { status = "Error", message = _errorService.LogError(e) });
             }
         }
-        [HttpGet, Route("api/v1/[controller]/Delete")]
+        [HttpGet, Route("Delete")]
         public IActionResult Delete(int productId)
         {
             try {

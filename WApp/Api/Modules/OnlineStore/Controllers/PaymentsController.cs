@@ -8,10 +8,8 @@ using WApp.Api.Infraestructure.Data.Entities;
 using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Services;
-using System;
 using Stripe;
 using WApp.Api.Modules.OnlineStore.Models;
-using Orders = WApp.Api.Infraestructure.Data.Entities.Orders;
 using WApp.Api.Modules.OnlineStore.Interfaces;
 
 namespace WApp.Api.Modules.OnlineStore.Controllers
@@ -38,7 +36,7 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
             _companyService = companyService;
             _userService = userService;
         }
-        [HttpPost, Route("api/v1/[controller]/Pay")]
+        [HttpPost, Route("Pay")]
         public IActionResult Pay([FromBody]Payment paymentInfo)
         {
             try

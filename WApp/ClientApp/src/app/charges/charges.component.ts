@@ -1,6 +1,7 @@
 import { Component, Inject, EventEmitter, Output } from "@angular/core";
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { MessageService } from "primeng/api";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-charges',
@@ -10,13 +11,26 @@ import { MessageService } from "primeng/api";
 export class ChargesComponent {
   public orders: Order[];
   public refund: RefundInfo;
+  private headers: HttpHeaders;
   constructor(private http: HttpClient,@Inject('BASE_URL') private baseUrl: string, private messageService: MessageService) {
-    http.get<Order[]>(baseUrl + 'api/Order/List').subscribe(result => {
+    this.headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem('token')
+    })
+    console.log('Bearer ' + localStorage.getItem('token'));
+    console.log(this.headers);
+    http.get<Order[]>(baseUrl + 'api/v1/Order/List', { headers: this.headers }).subscribe(result => {
       console.error(result);
       this.orders = result;
     }, error => console.error(error));
   }
-
+  getLoggedInUser(baseUrl): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + localStorage.getItem('token')
+    });
+    return this.http.get(baseUrl + 'api/Order/List', { headers: headers })
+  }
   ngOnInit() {
   }
   showConfirm(orderId, amount) {

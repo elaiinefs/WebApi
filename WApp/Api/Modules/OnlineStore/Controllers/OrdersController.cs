@@ -13,6 +13,7 @@ using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Services;
 using WApp.Api.Modules.OnlineStore.Interfaces;
+using Stripe;
 
 namespace WApp.Api.Modules.OnlineStore.Controllers
 {
@@ -24,20 +25,21 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
         private readonly ILogger _logger;
         private readonly IOrderService _orderService;
         private readonly IErrorHandlerService _errorService;
+        private readonly IStripeService _stripeService;
 
-        public OrdersController(IConfiguration config, ILogger<OrdersController> logger, IOrderService orderService, IErrorHandlerService errorService)
+        public OrdersController(IStripeService _stripeService, IConfiguration config, ILogger<OrdersController> logger, IOrderService orderService, IErrorHandlerService errorService)
         {
             _config = config;
             _logger = logger;
-            
+            _stripeService = _stripeService;
             _orderService = orderService;_errorService = errorService;
         }
-        [HttpGet, Route("api/v1/[controller]/List")]
-        public List<GetOrdersView> List()
+        [HttpGet, Route("List")]
+        public List<Charge> List()
         {
-            return _orderService.List();
+            return _stripeService.List();
         }
-        [HttpPost, Route("api/v1/[controller]/Add")]
+        [HttpPost, Route("Add")]
         public IActionResult Add(Orders order)
         {
             try
@@ -50,7 +52,7 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
                 return Json(new { status = "Error", message = _errorService.LogError(e) });
             }
         }
-        [HttpPost, Route("api/v1/[controller]/Update")]
+        [HttpPost, Route("Update")]
         public IActionResult Update(Orders order)
         {
             try
@@ -63,7 +65,7 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
                 return Json(new { status = "Error", message = _errorService.LogError(e) });
             }
         }
-        [HttpGet, Route("api/v1/[controller]/Delete")]
+        [HttpGet, Route("Delete")]
         public IActionResult Delete(int orderId)
         {
             try

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Stripe;
+using System.Collections.Generic;
 using System.Linq;
 using WApp.Api.Infraestructure.Data.Entities;
 using WApp.Api.Modules.OnlineStore.Interfaces;
@@ -21,7 +22,7 @@ namespace WApp.Api.Modules.OnlineStore.Services
         public string SetKey(string userEmail)
         {
             var environment = _config.GetSection("testingStatus").Value;
-            if (environment == "")
+            if (environment == ""|| environment == null)
             {
                 environment = "test";
             }
@@ -75,6 +76,34 @@ namespace WApp.Api.Modules.OnlineStore.Services
             var service = new ChargeService();
             Charge charge = service.Create(options);// This will do the Payment
             return charge;
+        }
+
+        public List<Charge> List()
+        {
+            //StripeConfiguration.SetApiKey(_config.GetSection("api_key").Value);
+
+            var service = new ChargeService();
+            service.ExpandCustomer = true;
+            service.ExpandOrder = true;
+            var options = new ChargeListOptions
+            {
+                Limit = 100,
+            };
+            var orders = service.List(options);
+            foreach (var order in orders)
+            {
+                order.Created = order.Created.Date;
+                order.Amount = order.Amount;
+                order.AmountRefunded = order.AmountRefunded;
+                if (order.Customer != null)
+                {
+                    if (order.Customer.Email == "zaraiipay@gmail.com")
+                    {
+                        order.Customer.Email = "";
+                    }
+                }
+            }
+            return orders.Data;
         }
         #endregion
 

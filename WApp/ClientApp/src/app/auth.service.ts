@@ -54,9 +54,10 @@ export class AuthService {
     this.authenticate(this.paymentInfo);
   }
   public authenticate(paymentInfo: any) {
-   
-    return this.http.post(this.currentUrl + 'api/v1/Authorize', paymentInfo).subscribe(result => {
-      localStorage.setItem('token', result.toString());
+    return this.http.post<string>(this.currentUrl + 'api/v1/Authorize', paymentInfo).subscribe(result => {
+      console.error(result);
+      localStorage.setItem('token', result);
+      
     }, error => console.error(error));
   }
 

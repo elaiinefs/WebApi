@@ -24,7 +24,7 @@ namespace WApp.Api.Infraestructure.Core.Authentication
         }
         #region Auth
         [AllowAnonymous]
-        [HttpPost, Route("api/v1/RequestToken")]
+        [HttpPost, Route("RequestToken")]
         public ActionResult RequestToken([FromBody] TokenRequest request)
         {
             if (!ModelState.IsValid)
@@ -44,7 +44,7 @@ namespace WApp.Api.Infraestructure.Core.Authentication
         #endregion
         #region Stripe
         [AllowAnonymous]
-        [HttpPost, Route("api/v1/Authorize")]
+        [HttpPost, Route("Authorize")]
         public ActionResult Stripe([FromBody]Payment paymentInfo)
         {
             SetStripeKey(paymentInfo.Buyer_Email);
@@ -53,15 +53,15 @@ namespace WApp.Api.Infraestructure.Core.Authentication
             string token;
             if (_authService.IsAuthenticated(request, out token))
             {
-                return Ok(token);
+                return Json(new {token = token });
             }
             return BadRequest("Invalid Request");
         }
-        [HttpPost, Route("api/v1/SetStripeKey")]
+        [HttpPost, Route("SetStripeKey")]
         public void SetStripeKey(string BusinessEmail)
         {
             var key = _stripeService.SetKey(BusinessEmail);
-            _stripeService.SetKey(key);
+            //_stripeService.SetKey(key);
         }
         #endregion
     }
