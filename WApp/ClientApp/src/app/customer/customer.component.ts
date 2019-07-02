@@ -8,14 +8,10 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 })
 export class CustomerComponent{
   public customers: Customers[];
-  private headers: HttpHeaders;
-  createAuthorizationHeader(headers: Headers) {
-    //headers.append('Authorization', 'Bearer ' +
-    //  'sk_test_J55K1bgEQSvKRIEyQhxYWRpd00c5CKEOGv');
-  }
+
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
 
-    http.get<Customers[]>(baseUrl +'api/Customer/List', { headers: this.headers }).subscribe(result => {
+    http.get<Customers[]>(baseUrl +'api/v1/Customers/List').subscribe(result => {
       this.customers = result;
     }, error => console.error(error));
   }

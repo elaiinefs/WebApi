@@ -25,8 +25,10 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
         private readonly IStripeService _stripeService;
         private readonly ICompanyService _companyService;
         private readonly IUserService _userService;
+        public readonly IStripeCustomerService _stripeCustomerService;
+        public readonly IStripeChargesService _stripeChargesService;
 
-        public PaymentsController(IUserService userService, ICompanyService companyService, IStripeService stripeService, IConfiguration config, ILogger<PaymentsController> logger, IErrorHandlerService errorService, IOrderService orderService)
+        public PaymentsController(IStripeChargesService stripeChargesService, IStripeCustomerService stripeCustomerService, IUserService userService, ICompanyService companyService, IStripeService stripeService, IConfiguration config, ILogger<PaymentsController> logger, IErrorHandlerService errorService, IOrderService orderService)
         {
             _config = config;
             _logger = logger;
@@ -35,6 +37,8 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
             _stripeService = stripeService;
             _companyService = companyService;
             _userService = userService;
+            _stripeCustomerService = stripeCustomerService;
+            _stripeChargesService = stripeChargesService;
         }
         [HttpPost, Route("Pay")]
         public IActionResult Pay([FromBody]Payment paymentInfo)
@@ -53,7 +57,7 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
                 var newToken = _stripeService.CreateCardToken(paymentInfo);
 
                 //Create Customer Object and Register it on Stripe  
-                Customer stripeCustomer = _stripeService.CreateCustomer(newToken, paymentInfo, null);
+                Customer stripeCustomer = _stripeCustomerService.Create(newToken, paymentInfo, null);
 
                 //Create local user Object and register on Application
                 var zaraiiUser = _userService.CreateUpdateCustomer(newToken, paymentInfo, null, null, stripeCustomer.Id);
@@ -66,10 +70,10 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
                 var businessAddress = _companyService.SetAddress(businessInfo);
 
                 //Create Charge Object with details of Charge  
-                var options = _stripeService.Options(amountTotal, paymentInfo.CurrencyId, customerEmail, stripeCustomer.Id, businessName, businessAddress);
+                var options = _stripeChargesService.Options(amountTotal, paymentInfo.CurrencyId, customerEmail, stripeCustomer.Id, businessName, businessAddress);
       
                 //and Create Method of this object is doing the payment execution.  
-                var payment = _stripeService.CreateCharge(options);
+                var payment = _stripeChargesService.CreateCharge(options);
 
                 //Create local order
                 _orderService.Create(zaraiiUser.Id, amountTotal.ToString(), DateTime.Now.ToString());

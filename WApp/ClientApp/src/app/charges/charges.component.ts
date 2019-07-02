@@ -3,6 +3,8 @@ import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { MessageService } from "primeng/api";
 import { Observable } from "rxjs";
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-charges',
   templateUrl: './charges.component.html',
@@ -11,10 +13,10 @@ import { Observable } from "rxjs";
 export class ChargesComponent {
   public orders: Observable<Order[]>;
   public refund: RefundInfo;
-  private headers: HttpHeaders;
+
   constructor(private http: HttpClient,@Inject('BASE_URL') private baseUrl: string, private messageService: MessageService) {
     this.getLoggedInUser(baseUrl);
-    http.get<Observable<Order[]>>(baseUrl + 'api/v1/Orders/List').subscribe(result => {
+    http.get<Observable<Order[]>>(environment.apiEndpoint + 'api/v1/Orders/List').subscribe(result => {
       console.error(result);
       this.orders = result;
     }, error => console.error(error));

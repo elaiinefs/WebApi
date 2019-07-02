@@ -1,5 +1,6 @@
 import { Component, Inject } from "@angular/core";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,17 +16,13 @@ export class DashboardComponent {
   private headers: HttpHeaders;
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Customers>(baseUrl + 'api/Customer/List', { headers: this.headers }).subscribe(result => {
-      this.customersData = result;
-    }, error => console.error(error));
-
-    http.get<ordersByMonth>(baseUrl + 'api/Dashboard/Orders', { headers: this.headers }).subscribe(result => {
+    http.get<ordersByMonth>(environment.apiEndpoint + 'api/v1/Summaries/Charges', { headers: this.headers }).subscribe(result => {
       this.ordersData = result;
       this.updateOrderData(result);
       this.curr = "$";
     }, error => console.error(error));
 
-    http.get<salesByMonth>(baseUrl + 'api/Dashboard/GetSales', { headers: this.headers }).subscribe(result => {
+    http.get<salesByMonth>(environment.apiEndpoint + 'api/v1/Summaries/Sales', { headers: this.headers }).subscribe(result => {
       this.updateSalesData(result);
     }, error => console.error(error));
   }

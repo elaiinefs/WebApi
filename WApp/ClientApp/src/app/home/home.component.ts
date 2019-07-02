@@ -6,6 +6,8 @@ import * as _ from 'lodash';
 import { Config } from 'protractor';
 import { Router } from '@angular/router';
 
+import { environment } from '../../environments/environment';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -44,11 +46,11 @@ export class HomeComponent {
     this.paymentSucceed = false;
     this.ProcessingPayment = true;
     this.headers.append(localStorage.getItem("user_email"));
-    return this.http.post(this.currentUrl + 'api/v1/Payments/Pay', paymentInfo, { headers: this.headers })
+    return this.http.post(environment.apiEndpoint + 'api/v1/Payments/Pay', paymentInfo, { headers: this.headers })
       .subscribe(
       res => {
         this.sMessage = res.message;
-        if (res.status == "error") {
+        if (res.status == "Error") {
           this.paymentError = true;
           this.paymentSucceed = false;
           this.ProcessingPayment = false;

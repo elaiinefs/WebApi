@@ -26,18 +26,20 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
         private readonly IOrderService _orderService;
         private readonly IErrorHandlerService _errorService;
         private readonly IStripeService _stripeService;
+        public readonly IStripeChargesService _stripeChargesService;
 
-        public OrdersController(IStripeService stripeService, IConfiguration config, ILogger<OrdersController> logger, IOrderService orderService, IErrorHandlerService errorService)
+        public OrdersController(IStripeChargesService stripeChargesService, IStripeService stripeService, IConfiguration config, ILogger<OrdersController> logger, IOrderService orderService, IErrorHandlerService errorService)
         {
             _config = config;
             _logger = logger;
             _stripeService = stripeService;
             _orderService = orderService;_errorService = errorService;
+            _stripeChargesService = stripeChargesService;
         }
         [HttpGet, Route("List")]
         public List<Charge> List()
         {
-            return _stripeService.List();
+            return _stripeChargesService.List();
         }
         [HttpPost, Route("Add")]
         public IActionResult Add(Orders order)

@@ -71,6 +71,8 @@ namespace WApp
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IStripeService, StripeService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IStripeCustomerService, StripeCustomerService>();
+            services.AddScoped<IStripeChargesService, StripeChargesService>();
             services.AddSwaggerGen(c =>
             {
 

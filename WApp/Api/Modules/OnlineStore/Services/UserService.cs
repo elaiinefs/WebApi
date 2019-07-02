@@ -15,12 +15,14 @@ namespace WApp.Api.Modules.OnlineStore.Services
         private readonly DbObjectContext _context;
         private readonly IConfiguration _config;
         private readonly IStripeService _stripeService;
+        public readonly IStripeCustomerService _stripeCustomerService;
 
-        public UserService(IStripeService stripeService, DbObjectContext context, IConfiguration config)
+        public UserService(IStripeCustomerService stripeCustomerService, IStripeService stripeService, DbObjectContext context, IConfiguration config)
         {
             _context = context;
             _config = config;
             _stripeService = stripeService;
+            _stripeCustomerService = stripeCustomerService;
         }
 
         public Users GetUserByEmail(string email)
@@ -65,7 +67,7 @@ namespace WApp.Api.Modules.OnlineStore.Services
                 user.Status = "Active";
                 //newOrder.Customer = user.Id.ToString();
                 Update(user);
-                _stripeService.UpdateCustomer(user);
+                _stripeCustomerService.Update(user);
                 return user;
             }
         }
