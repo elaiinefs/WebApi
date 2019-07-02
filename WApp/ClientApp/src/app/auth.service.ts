@@ -2,17 +2,19 @@
 import { Injectable, Inject, InjectionToken  } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders, HttpResponse, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
-import { filter } from 'rxjs/operators';
+import { filter, share, map } from 'rxjs/operators';
 import Auth0Lock from 'auth0-lock';
 import { environment } from '../environments/environment';
 import * as auth0 from 'auth0-js';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { JwtHelperService } from 'auth0-js';
 
 (window as any).global = window;
 @Injectable()
 export class AuthService {
   public currentUrl: string;
-  public paymentInfo:any;
+  public paymentInfo: any;
+  private decoder: JwtHelperService;
   auth0 = new auth0.WebAuth({
     clientID: 'KN4t97RHiydBMKRlQEMj3QMyacyAB3XH',
     domain: 'zaraiipay.auth0.com',
@@ -54,10 +56,8 @@ export class AuthService {
     this.authenticate(this.paymentInfo);
   }
   public authenticate(paymentInfo: any) {
-    return this.http.post<string>(this.currentUrl + 'api/v1/Authorize', paymentInfo).subscribe(result => {
-      console.error(result);
-      localStorage.setItem('token', result);
-      
+    return this.http.post<Object>(this.currentUrl + 'api/v1/Authorize', paymentInfo).subscribe(result => {
+      localStorage.setItem('token', result["token"]);
     }, error => console.error(error));
   }
 
@@ -81,7 +81,41 @@ export class AuthService {
     return new Date().getTime() < expiresAt;
   }
 
-  public getToken(): string {
-    return localStorage.getItem('token');
+  public getToken(): Observable<string> {
+    const token = localStorage.getItem('token');
+    const isTokenExpired = false;
+    if (!isTokenExpired) {
+      return of(token);
+    }
+    return this.refreshToken();
+  }
+  refreshToken(): Observable<string> {
+    const url = this.currentUrl + 'api/v1/Authorize';
+
+    // append refresh token if you have one
+    const refreshToken = localStorage.getItem('refreshToken');
+    const expiredToken = localStorage.getItem('token');
+
+    return this.http
+      .get(url, {
+        headers: new HttpHeaders()
+          .set('refreshToken', refreshToken)
+          .set('token', expiredToken),
+        observe: 'response'
+      })
+      .pipe(
+        share(), // <========== YOU HAVE TO SHARE THIS OBSERVABLE TO AVOID MULTIPLE REQUEST BEING SENT SIMULTANEOUSLY
+        map(res => {
+          const token = res.headers.get('token');
+          const newRefreshToken = res.headers.get('refreshToken');
+          // store the new tokens
+          localStorage.setItem('refreshToken', newRefreshToken);
+          localStorage.setItem('token', token);
+          return token;
+        })
+      );
+  }
+  removeTokens() {
+    localStorage.removeItem('token');
   }
 }

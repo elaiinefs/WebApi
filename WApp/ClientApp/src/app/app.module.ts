@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -33,6 +33,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoaderComponent } from './loader/loader.component';
 import { InvoiceComponent } from './presenters/invoice/invoice.component';
 import { NgxPrintModule } from 'ngx-print';
+
+import { Interceptor } from './services/incerceptor';
 
 @NgModule({
   declarations: [
@@ -79,7 +81,12 @@ import { NgxPrintModule } from 'ngx-print';
       { path: 'dashboard', component: DashboardComponent}
     ])
   ],
-  providers: [AuthService, MessageService],
+  providers: [AuthService, MessageService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,17 +9,12 @@ import { Observable } from "rxjs";
   styleUrls: ['./charges.component.css']
 })
 export class ChargesComponent {
-  public orders: Order[];
+  public orders: Observable<Order[]>;
   public refund: RefundInfo;
   private headers: HttpHeaders;
   constructor(private http: HttpClient,@Inject('BASE_URL') private baseUrl: string, private messageService: MessageService) {
-    this.headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + localStorage.getItem('token')
-    })
-    console.log('Bearer ' + localStorage.getItem('token'));
-    console.log(this.headers);
-    http.get<Order[]>(baseUrl + 'api/v1/Order/List', { headers: this.headers }).subscribe(result => {
+    this.getLoggedInUser(baseUrl);
+    http.get<Observable<Order[]>>(baseUrl + 'api/v1/Orders/List').subscribe(result => {
       console.error(result);
       this.orders = result;
     }, error => console.error(error));
@@ -29,7 +24,7 @@ export class ChargesComponent {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('token')
     });
-    return this.http.get(baseUrl + 'api/Order/List', { headers: headers })
+    return this.http.get(baseUrl + 'api/Orders/List', { headers: headers })
   }
   ngOnInit() {
   }

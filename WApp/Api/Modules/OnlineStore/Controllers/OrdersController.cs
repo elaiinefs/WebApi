@@ -27,11 +27,11 @@ namespace WApp.Api.Modules.OnlineStore.Controllers
         private readonly IErrorHandlerService _errorService;
         private readonly IStripeService _stripeService;
 
-        public OrdersController(IStripeService _stripeService, IConfiguration config, ILogger<OrdersController> logger, IOrderService orderService, IErrorHandlerService errorService)
+        public OrdersController(IStripeService stripeService, IConfiguration config, ILogger<OrdersController> logger, IOrderService orderService, IErrorHandlerService errorService)
         {
             _config = config;
             _logger = logger;
-            _stripeService = _stripeService;
+            _stripeService = stripeService;
             _orderService = orderService;_errorService = errorService;
         }
         [HttpGet, Route("List")]
