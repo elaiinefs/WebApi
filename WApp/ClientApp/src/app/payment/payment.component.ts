@@ -34,7 +34,7 @@ export class PaymentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.subTotal = 0;
+    //this.subTotal = 0;
     this.tax1 = 0;
     this.tax2 = 0;
     this.uEmail = "";

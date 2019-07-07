@@ -18,13 +18,16 @@
                 <span class="hide-small">Sub Total</span>
                 <div class="col-12">
                   <span class="req-fld">*</span>
-                  <input type="text" class="form-control" placeholder="Total ($)"
-                         required (change)="calculateTotal($event)" type="number" [(ngModel)]="subTotal" maxlength="150" />
+                  <input class="form-control" placeholder="Total ($)"
+                         required (change)="calculateTotal($event)" [(ngModel)]="subTotal" #subTotalA="ngModel"/>
+                </div>
+                <div *ngIf="subTotalA.errors.required && subTotalA.invalid && (subTotalA.dirty || subTotalA.touched)">
+                  <label class="error-msg">Amount is required.</label>
                 </div>
               </div>
               <div class="col-3 tax-left">
                 <span class="hide-small">State Tax (%)</span>
-                <input type="text" class="form-control" placeholder="state"
+                <input class="form-control" placeholder="state"
                        required (change)="calculateTotal($event)" type="number" [(ngModel)]="tax1" maxlength="150"/>
               </div>
               <div class="col-3 tax-right">
@@ -80,11 +83,15 @@
               CARD NUMBER
             </label>
             <div class="input-group">
-              <div class="col-12"><span class="req-fld">*</span>
-                <input (change)="fillCardData($event)" type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number / Scan Card Here"
-                       required [(ngModel)]="cNumber" />
+              <div class="col-12">
+                <span class="req-fld">*</span>
+                <input (change)="fillCardData($event)" type="number" class="form-control" id="cardNumber" placeholder="Valid Card Number / Scan Card Here"
+                       required [(ngModel)]="cNumber" #cNumberA="ngModel"/>
                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
               </div>
+            </div>
+            <div *ngIf="cNumberA.errors.required && cNumberA.invalid && (cNumberA.dirty || cNumberA.touched)">
+              <label class="error-msg">Card Number is required.</label>
             </div>
           </div>
           <div class="form-group">
@@ -92,14 +99,14 @@
               CARD HOLDER'S NAME
             </label>
             <div class="input-group">
-              <div class="col-12"><span class="req-fld">*</span>
+              <div class="col-12">
+                <span class="req-fld">*</span>
                 <input type="text" class="form-control" id="cardOwnerFirstN" placeholder="Card Holder's Full Name"
-                       required type="text" [(ngModel)]="uFirst" />
+                       required [(ngModel)]="uFirst" #holdersName="ngModel" />
               </div>
-              <!--<div class="col-6">
-                <input type="text" class="form-control" id="cardOwnerLastN" placeholder="Card Holder's Last Name"
-                       required type="text" [(ngModel)]="uLast" />
-              </div>-->
+              <div *ngIf="holdersName.errors.required && (holdersName.dirty || holdersName.touched)">
+                <label class="error-msg">Card Holder's name is required.</label>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -108,11 +115,16 @@
                 <label for="expityMonth">
                   EXPIRY DATE
                 </label>
-                <div class="col-xs-6 col-lg-6 pl-ziro"><span class="req-fld">*</span>
-                  <input type="text" class="form-control" id="expityMonth" placeholder="MM" required type="number" [(ngModel)]="expMonth" />
+                <div class="col-xs-6 col-lg-6 pl-ziro">
+                  <span class="req-fld">*</span>
+                  <input class="form-control" id="expityMonth" placeholder="MM" required type="number" [(ngModel)]="expMonth" #expMonthA="ngModel" />
                 </div>
-                <div class="col-xs-6 col-lg-6 pl-ziro"><span class="req-fld">*</span>
-                  <input type="text" class="form-control" id="expityYear" placeholder="YY" required type="number" [(ngModel)]="expYear" />
+                <div class="col-xs-6 col-lg-6 pl-ziro">
+                  <span class="req-fld">*</span>
+                  <input class="form-control" id="expityYear" placeholder="YY" required type="number" [(ngModel)]="expYear" #expYearA="ngModel"/>
+                </div>
+                <div *ngIf="expMonthA.errors.required && expYearA.errors.required && (expMonthA.dirty || expMonthA.touched) && (expYearA.dirty || expYearA.touched)">
+                  <label class="error-msg">Expiration Date is required is required.</label>
                 </div>
               </div>
             </div>
@@ -123,8 +135,12 @@
                 </label>
                 <div class="col-12">
                   <span class="req-fld">*</span>
-                  <input type="password" class="form-control" id="cvCode" placeholder="CV" required type="number" [(ngModel)]="cardCVV" />
-                </div></div>
+                  <input type="password" class="form-control" id="cvCode" placeholder="CV" required type="number" [(ngModel)]="cardCVV" #cardCode="ngModel"/>
+                </div>
+                <div *ngIf="cardCode.errors.required && cardCode.invalid && (cardCode.dirty || cardCode.touched)">
+                  <label class="error-msg">Card Number is required.</label>
+                </div>
+              </div>
             </div>
           </div>
         </div>
