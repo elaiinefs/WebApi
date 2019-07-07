@@ -19,7 +19,7 @@ export class AuthService {
     clientID: 'KN4t97RHiydBMKRlQEMj3QMyacyAB3XH',
     domain: 'zaraiipay.auth0.com',
     responseType: 'token id_token',
-    redirectUri: environment.apiEndpoint,
+    redirectUri: environment.clientUrl,
     scope: 'openid email profile'
   });
 
@@ -56,7 +56,7 @@ export class AuthService {
     this.authenticate(this.paymentInfo);
   }
   public authenticate(paymentInfo: any) {
-    return this.http.post<Object>(this.currentUrl + 'api/v1/Authorize', paymentInfo).subscribe(result => {
+    return this.http.post<Object>(environment.apiEndpoint + 'api/v1/Authorize', paymentInfo).subscribe(result => {
       localStorage.setItem('token', result["token"]);
     }, error => console.error(error));
   }
@@ -90,7 +90,7 @@ export class AuthService {
     return this.refreshToken();
   }
   refreshToken(): Observable<string> {
-    const url = this.currentUrl + 'api/v1/Authorize';
+    const url = environment.apiEndpoint + 'api/v1/Authorize';
 
     // append refresh token if you have one
     const refreshToken = localStorage.getItem('refreshToken');

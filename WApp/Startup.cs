@@ -136,7 +136,7 @@ namespace WApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(x => x.WithOrigins("http://localhost:44352", "https://localhost:44317", "http://zaraiipay-001-site1.htempurl.com", "https://zaraiipay.firebaseapp.com").AllowAnyMethod().AllowAnyHeader());
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();

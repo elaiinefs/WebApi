@@ -17,6 +17,7 @@ export class HomeComponent {
   @Output() sMessage: any;
   @Output() paymentError: boolean;
   @Output() paymentSucceed: boolean;
+  @Output() ProcessingPayment: boolean;
   @Output() fillInvoice = new EventEmitter<any>();
   @Output() clearCardFields = new EventEmitter<any>();
 
@@ -32,6 +33,7 @@ export class HomeComponent {
     this.currentUrl = baseUrl;
     this.paymentError = false;
     this.paymentSucceed = false;
+    this.ProcessingPayment = false;
     this.headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
       'Stripe-Account':'acct_1EHCbXAdyX2SDB4E'
@@ -67,8 +69,6 @@ export class HomeComponent {
           this.clearCardFields.emit();
         }
       });
-
-    //this.sMessage = 'Payment Completed!';
   };
 
 }

@@ -36,7 +36,6 @@ namespace WApp.Api.Infraestructure.Data.Entities
         public virtual DbSet<InvoiceMsg> InvoiceMsg { get; set; }
         public virtual DbSet<Keys> Keys { get; set; }
         public virtual DbSet<Manufacturer> Manufacturer { get; set; }
-        public virtual DbSet<Model> Model { get; set; }
         public virtual DbSet<Notes> Notes { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<OrdersProducts> OrdersProducts { get; set; }

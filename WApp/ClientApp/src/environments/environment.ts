@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://localhost:44317/'
+  apiEndpoint: 'https://localhost:44317/',
+  clientUrl:'https://localhost:44317/'
   //production: true,
   //apiEndpoint: 'http://zaraiipay-001-site1.htempurl.com/'
 };

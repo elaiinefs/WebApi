@@ -44,23 +44,27 @@ namespace WApp.Api.Modules.OnlineStore.Services
             //StripeConfiguration.SetApiKey(_config.GetSection("api_key").Value);
 
             var service = new ChargeService();
-            service.ExpandCustomer = true;
-            service.ExpandOrder = true;
-            var options = new ChargeListOptions
+            
+            var optionsl = new ChargeListOptions
             {
                 Limit = 100,
             };
-            var orders = service.List(options);
+            var orders = service.List(optionsl);
             foreach (var order in orders)
             {
-                order.Created = order.Created.Date;
-                order.Amount = order.Amount;
-                order.AmountRefunded = order.AmountRefunded;
+                var services = new ChargeService();
+                var options = new ChargeGetOptions();
+                options.AddExpand("customer");
+                options.AddExpand("order");
+                var charge = service.Get(order.Id, options);
+                order.Created = charge.Created.Date;
+                order.Amount = charge.Amount;
+                order.AmountRefunded = charge.AmountRefunded;
                 if (order.Customer != null)
                 {
-                    if (order.Customer.Email == "zaraiipay@gmail.com")
+                    if (charge.Customer.Email == "zaraiipay@gmail.com")
                     {
-                        order.Customer.Email = "";
+                        charge.Customer.Email = "";
                     }
                 }
             }

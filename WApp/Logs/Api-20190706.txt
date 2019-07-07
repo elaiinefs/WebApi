@@ -1,0 +1,41 @@
+2019-07-06T00:31:35.2976943-04:00  [INF] Starting @angular/cli on port 54433... (7c7745e0)
+2019-07-06T00:31:37.3591848-04:00 0HLO1PBAKVMPQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-06T00:31:37.3591848-04:00 0HLO1PBAKVMPR:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-06T00:31:37.5122685-04:00 0HLO1PBAKVMPR:00000001 [INF] Request finished in 209.5567ms 200  (791a596a)
+2019-07-06T00:31:38.0286032-04:00 0HLO1PBAKVMPQ:00000001 [INF] Request finished in 615.6003ms 301  (791a596a)
+2019-07-06T00:31:38.0485221-04:00 0HLO1PBAKVMPR:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-06T00:31:38.5581071-04:00 0HLO1PBAKVMPR:00000002 [INF] Request finished in 483.8533ms 200 text/html (791a596a)
+2019-07-06T00:31:38.7932208-04:00 0HLO1PBAKVMPQ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-06T00:31:38.8061887-04:00 0HLO1PBAKVMPR:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-06T00:31:38.8086919-04:00 0HLO1PBAKVMPS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-06T00:31:39.3461199-04:00 0HLO1PBAKVMPS:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-06T00:31:39.4065450-04:00 0HLO1PBAKVMPR:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-06T00:31:39.6642412-04:00 0HLO1PBAKVMPQ:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-06T00:31:40.0409773-04:00 0HLO1PBAKVMPS:00000001 [INF] Request finished in 564.2961ms 200 application/javascript (791a596a)
+2019-07-06T00:31:40.2716210-04:00 0HLO1PBAKVMPQ:00000002 [INF] Request finished in 902.0636ms 200 application/javascript (791a596a)
+2019-07-06T00:31:40.2809309-04:00 0HLO1PBAKVMPR:00000003 [INF] Request finished in 627.5741ms 200 text/css (791a596a)
+2019-07-06T00:31:41.8958561-04:00 0HLO1PBAKVMPR:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-06T00:31:44.0427011-04:00 0HLO1PBAKVMPR:00000004 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-06T00:31:44.0577010-04:00 0HLO1PBAKVMPR:00000004 [INF] Request finished in 2180.5562ms 200 text/plain (791a596a)
+2019-07-06T00:31:47.5684185-04:00 0HLO1PBAKVMPS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-06T00:31:48.2878315-04:00 0HLO1PBAKVMPS:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-06T00:31:48.3029876-04:00 0HLO1PBAKVMPS:00000002 [INF] Request finished in 765.377ms 200 text/plain (791a596a)
+2019-07-06T00:31:49.9220412-04:00 0HLO1PBAKVMPQ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-06T00:31:51.6442248-04:00 0HLO1PBAKVMPQ:00000003 [INF] Request finished in 1692.383ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-06T00:32:04.2164569-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54433"
+
+** Angular Live Development Server is listening on localhost:54433, open your browser on http://localhost:54433/ **
+ (8ea6dc0d)
+2019-07-06T00:32:56.3902580-04:00  [INF] Date: 2019-07-06T04:32:56.254Z
+Hash: d3ff9e3771c53e6be33c
+Time: 51592ms
+chunk {main} main.js, main.js.map (main) 197 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 347 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (cc838a44)
+2019-07-06T00:32:56.4250488-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)

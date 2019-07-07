@@ -38,10 +38,12 @@ export class ChargesComponent {
       businessEmail: localStorage.getItem("user_email"),
       reason : ""
     }
-
+  
     this.messageService.add({ key: 'custom', sticky: true, severity: 'warn', summary: "Are you sure you want to complete a refund of " + (amount/100), detail: "Order Number: " + orderId +'. Confirm to proceed.' });
   }
-
+  onReject() {
+    console.log("rejected");
+    }
   public async refundOrder(orderId, amount, @Inject('BASE_URL') baseUrl: string, http: HttpClient) {
     await http.post(baseUrl + 'api/Order/Refund', this.refund)
       .subscribe(

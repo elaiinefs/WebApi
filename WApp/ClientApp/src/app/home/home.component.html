@@ -3,21 +3,21 @@
   <div class="col-md-8">
     <!--<app-manage-schedule (scheduleCreated)="createOrUpdateSchedule($event)" (schedulePaid)="paySchedule($event)" (accountConnected)="connectToStripe($event)" [getScheduleId]="scheduleId" [paymentStatusMessage]="paymentStatus"></app-manage-schedule>-->
     <div class="row">
-      <app-payment (paidOrder)="payingOrder($event)" (clearCardFields)="emptyCarField($event)"></app-payment>
+      <app-payment (paidOrder)="payingOrder($event)"></app-payment>
     </div>
 
     <div class="alerts-div">
-        <div class="text-center">
-          <div *ngIf="ProcessingPayment" class="alert alert-warning btn-block">
-            <strong>Warning!</strong> Processing payment, please wait...
-          </div>
-          <div *ngIf="paymentSucceed" class="alert alert-success btn-block">
-            <strong>Success!</strong> Payment completed.
-          </div>
-          <div *ngIf="paymentError" class="alert alert-danger btn-block">
-            <strong>Error!</strong> {{sMessage}}
-          </div>
+      <div class="text-center">
+        <div *ngIf="ProcessingPayment" class="alert alert-warning btn-block">
+          <strong>Warning!</strong> Processing payment, please wait...
         </div>
+        <div *ngIf="paymentSucceed" class="alert alert-success btn-block">
+          <strong>Success!</strong> Payment completed.
+        </div>
+        <div *ngIf="paymentError" class="alert alert-danger btn-block">
+          <strong>Error!</strong> {{sMessage}}
+        </div>
+      </div>
     </div>
   </div>
   <div class="col-md-4">
@@ -103,18 +103,18 @@
       </div>
     </div>
     <!--<br class="hide-small"/>
-  <article class="well hide-small">
-    <h5 class="text-center">
-      ZaraiiPay Service<br />
-      <span>The easy to use payment app. </span>
-    </h5>
-    <input readonly="readonly" [(ngModel)]="sMessage" style="color: #06d85f; background-color: transparent; text-align: center; width: 100%; font-size: 23px; border: none;" />
-    <hr>
-    <div class="text-center">
-      <p> Enter your customer's billing information and the total amount of the order. It's so simple!</p>
-    </div>
-  </article>
-  <br class="hide-small" />
-  <hr class="hide-small">-->
+    <article class="well hide-small">
+      <h5 class="text-center">
+        ZaraiiPay Service<br />
+        <span>The easy to use payment app. </span>
+      </h5>
+      <input readonly="readonly" [(ngModel)]="sMessage" style="color: #06d85f; background-color: transparent; text-align: center; width: 100%; font-size: 23px; border: none;" />
+      <hr>
+      <div class="text-center">
+        <p> Enter your customer's billing information and the total amount of the order. It's so simple!</p>
+      </div>
+    </article>
+    <br class="hide-small" />
+    <hr class="hide-small">-->
   </div>
 </div>

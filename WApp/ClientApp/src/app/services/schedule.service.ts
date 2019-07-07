@@ -19,11 +19,11 @@ export class ScheduleService {
   }
   public add(payload) {
     //alert(this.accessPointUrl);
-    return this.http.post(this.currentUrl +'pi/SampleData/CreateService', payload, { headers: this.headers });
+    return this.http.post(this.currentUrl +'api/SampleData/CreateService', payload, { headers: this.headers });
   }
 
   public pay(payload) {
-    return this.http.post('https://localhost:44398/api/Payment/Pay', payload, { headers: this.headers })
+    return this.http.post(this.currentUrl +'api/Payment/Pay', payload, { headers: this.headers })
       .subscribe((res: Response) => {
         //console.log(res.headers);
         // you can assign the value to any variable here
