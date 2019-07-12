@@ -58,24 +58,21 @@ namespace WApp.Api.Infraestructure.Core.Services
         private string SendText(MailMessage message, SmtpClient client, string phoneNumber)
         {
             string[] carrers = {
-                "@vtexto.com", //sent to Claro PR and T-Mobile
-                "@txt.att.net", //sent to ATT
+                "@vtexto.com", //send to Claro PR and T-Mobile
+                "@txt.att.net", //send to ATT
+                "@tmomail.net",
+                "@messaging.sprintpcs.com",
+                "@vtext.com",
+                "@myboostmobile.com"
             };
-
+            message.Body = "";
             for (int i = 0; i < carrers.Length; i++)
             {
-                message.Body = "";
+                message.To.Clear();
                 message.To.Add(new MailAddress(phoneNumber + carrers[i]));
-                try
-                {
                 client.Send(message);
-                    continue;
-                }
-                catch (Exception e)
-                {
-
-                }
             }
+
             return "sent";
         }
         private string SendEmail(MailMessage message, SmtpClient client, MailAddress to)
