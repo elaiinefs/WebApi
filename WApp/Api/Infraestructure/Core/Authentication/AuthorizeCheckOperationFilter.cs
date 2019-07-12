@@ -15,6 +15,8 @@ namespace WApp.Api.Infraestructure.Core.Authentication
         {
                 operation.Responses.Add("401", new Response { Description = "Unauthorized" });
                 operation.Responses.Add("403", new Response { Description = "Forbidden" });
+                operation.Responses.Add("500", new Response { Description = "Internal Server Error" });
+
                 operation.Description = ".Net Core Main API";
                 operation.Summary = "Authenticate to make authorize request to the Main API.";
                 operation.ExternalDocs = new ExternalDocs

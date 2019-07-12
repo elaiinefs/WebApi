@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using WApp.Api.Infraestructure.Data.Entities;
-using WApp.Api.Modules.OnlineStore;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Services;
 using Stripe;

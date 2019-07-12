@@ -22,6 +22,7 @@ using WApp.Api.Modules.OnlineStore.Interfaces;
 using WApp.Api.Modules.OnlineStore.Services;
 using WApp.Api.Infraestructure.Core.Services;
 using Microsoft.Extensions.Logging;
+using WApp.Api.Infraestructure.Core.Interfaces;
 
 namespace WApp
 {
@@ -73,10 +74,12 @@ namespace WApp
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IStripeCustomerService, StripeCustomerService>();
             services.AddScoped<IStripeChargesService, StripeChargesService>();
+            services.AddScoped<IMessageService, MessageService>();
             services.AddSwaggerGen(c =>
             {
 
                 c.OperationFilter<AuthorizeCheckOperationFilter>();
+                
                 c.SwaggerDoc("v1", new Info
                 {
                     Version = "v1",
@@ -113,7 +116,7 @@ namespace WApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddFile("Logs/Api-{Date}.txt");
+            loggerFactory.AddFile("../Logs/Api-{Date}.txt");
             app.UseAuthentication();
             app.UseSession();
             if (env.IsDevelopment())

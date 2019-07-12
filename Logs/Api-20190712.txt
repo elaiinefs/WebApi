@@ -1,0 +1,905 @@
+2019-07-12T14:22:03.4824770-04:00 0HLO6DBM1JMTG:00000003 [INF] Request finished in 59301279.1486ms 200 application/javascript; charset=UTF-8 (791a596a)
+2019-07-12T14:22:17.8230167-04:00 0HLO6DBM1JMTD:00000002 [INF] Request finished in 59316638.7433ms 101  (791a596a)
+2019-07-12T15:35:54.9392914-04:00  [INF] Starting @angular/cli on port 50794... (7d03b408)
+2019-07-12T15:35:55.4527887-04:00 0HLO700K425J3:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T15:35:55.4527887-04:00 0HLO700K425J4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T15:35:55.4904650-04:00 0HLO700K425J3:00000001 [INF] Request finished in 45.0392ms 200  (791a596a)
+2019-07-12T15:35:55.6444650-04:00 0HLO700K425J4:00000001 [INF] Request finished in 196.091ms 301  (791a596a)
+2019-07-12T15:35:55.6611377-04:00 0HLO700K425J3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T15:35:55.8698116-04:00 0HLO700K425J3:00000002 [INF] Request finished in 204.7228ms 200 text/html (791a596a)
+2019-07-12T15:35:55.9289483-04:00 0HLO700K425J4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T15:35:55.9317411-04:00 0HLO700K425J3:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T15:35:55.9378237-04:00 0HLO700K425J5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T15:35:56.0703621-04:00 0HLO700K425J4:00000002 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:35:56.0703959-04:00 0HLO700K425J3:00000003 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:35:56.1338925-04:00 0HLO700K425J5:00000001 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:35:56.1474555-04:00 0HLO700K425J3:00000003 [INF] Request finished in 165.5857ms 200 application/javascript (791a596a)
+2019-07-12T15:35:56.1686256-04:00 0HLO700K425J5:00000001 [INF] Request finished in 205.1959ms 200 application/javascript (791a596a)
+2019-07-12T15:35:56.2297357-04:00 0HLO700K425J4:00000002 [INF] Request finished in 167.5838ms 200 text/css (791a596a)
+2019-07-12T15:35:56.5514737-04:00 0HLO700K425J4:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T15:35:56.6446913-04:00 0HLO700K425J4:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:35:56.6525793-04:00 0HLO700K425J4:00000003 [INF] Request finished in 100.6955ms 200 text/plain (791a596a)
+2019-07-12T15:35:58.1900200-04:00 0HLO700K425J3:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T15:35:58.2280466-04:00 0HLO700K425J3:00000004 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:35:58.2387156-04:00 0HLO700K425J3:00000004 [INF] Request finished in 41.369ms 200 text/plain (791a596a)
+2019-07-12T15:35:58.9584395-04:00 0HLO700K425J5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T15:36:00.1864071-04:00 0HLO700K425J5:00000002 [INF] Request finished in 1220.5707ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T15:36:12.5000314-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "50794"
+
+** Angular Live Development Server is listening on localhost:50794, open your browser on http://localhost:50794/ **
+ (ee1dcb84)
+2019-07-12T15:36:50.0087856-04:00  [INF] Date: 2019-07-12T19:36:50.002Z
+Hash: 44334d342d9ce0caff96
+Time: 37142ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (5c6f023a)
+2019-07-12T15:36:50.0974834-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T15:57:47.8745469-04:00  [INF] Starting @angular/cli on port 50910... (b7d31eb4)
+2019-07-12T15:57:48.3430114-04:00 0HLO70CRCNS57:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T15:57:48.3430114-04:00 0HLO70CRCNS58:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T15:57:48.3816423-04:00 0HLO70CRCNS57:00000001 [INF] Request finished in 46.9396ms 200  (791a596a)
+2019-07-12T15:57:48.5737332-04:00 0HLO70CRCNS58:00000001 [INF] Request finished in 235.2994ms 301  (791a596a)
+2019-07-12T15:57:48.5812059-04:00 0HLO70CRCNS57:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T15:57:48.7386658-04:00 0HLO70CRCNS57:00000002 [INF] Request finished in 155.8235ms 200 text/html (791a596a)
+2019-07-12T15:57:48.8290880-04:00 0HLO70CRCNS58:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T15:57:48.8290932-04:00 0HLO70CRCNS57:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T15:57:48.8357643-04:00 0HLO70CRCNS59:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T15:57:49.1274323-04:00 0HLO70CRCNS58:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:57:49.1562537-04:00 0HLO70CRCNS57:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:57:49.1754208-04:00 0HLO70CRCNS59:00000001 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:57:49.1798414-04:00 0HLO70CRCNS58:00000002 [INF] Request finished in 358.233ms 200 application/javascript (791a596a)
+2019-07-12T15:57:49.1872572-04:00 0HLO70CRCNS57:00000003 [INF] Request finished in 350.6029ms 200 text/css (791a596a)
+2019-07-12T15:57:49.2248852-04:00 0HLO70CRCNS59:00000001 [INF] Request finished in 353.8514ms 200 application/javascript (791a596a)
+2019-07-12T15:57:49.4996512-04:00 0HLO70CRCNS57:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T15:57:49.5771064-04:00 0HLO70CRCNS57:00000004 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:57:49.5815477-04:00 0HLO70CRCNS57:00000004 [INF] Request finished in 81.194ms 200 text/plain (791a596a)
+2019-07-12T15:57:51.1162648-04:00 0HLO70CRCNS58:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T15:57:51.1301886-04:00 0HLO70CRCNS58:00000003 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T15:57:51.1338468-04:00 0HLO70CRCNS58:00000003 [INF] Request finished in 18.9302ms 200 text/plain (791a596a)
+2019-07-12T15:57:51.8317549-04:00 0HLO70CRCNS59:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T15:57:53.0194834-04:00 0HLO70CRCNS59:00000002 [INF] Request finished in 1183.4533ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T15:58:01.2182956-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "50910"
+
+** Angular Live Development Server is listening on localhost:50910, open your browser on http://localhost:50910/ **
+ (b822e02b)
+2019-07-12T15:58:35.1316491-04:00  [INF] Date: 2019-07-12T19:58:35.125Z
+Hash: 44334d342d9ce0caff96
+Time: 33613ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (2386e167)
+2019-07-12T15:58:35.4393088-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T15:58:57.4646917-04:00 0HLO70CRCNS5A:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T15:58:57.5594486-04:00 0HLO70CRCNS5A:00000001 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T15:58:57.6150835-04:00 0HLO70CRCNS5A:00000001 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T15:58:57.6624215-04:00 0HLO70CRCNS5A:00000001 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 39.145ms (afa2e885)
+2019-07-12T15:58:57.6671451-04:00 0HLO70CRCNS5A:00000001 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T15:58:57.7805547-04:00 0HLO70CRCNS5A:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Could not create an instance of type 'System.Net.Mail.MailAddress'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Alternatively, give the 'to' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-07-12T15:58:57.8336915-04:00 0HLO70CRCNS5A:00000001 [INF] Request finished in 364.8907ms 500 text/html; charset=utf-8 (791a596a)
+2019-07-12T15:59:15.7220516-04:00 0HLO70CRCNS5A:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T15:59:15.7316048-04:00 0HLO70CRCNS5A:00000002 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T15:59:15.7361203-04:00 0HLO70CRCNS5A:00000002 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T15:59:15.7479561-04:00 0HLO70CRCNS5A:00000002 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 7.9384ms (afa2e885)
+2019-07-12T15:59:15.7509085-04:00 0HLO70CRCNS5A:00000002 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T15:59:15.7582455-04:00 0HLO70CRCNS5A:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Could not create an instance of type 'System.Net.Mail.MailAddress'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Alternatively, give the 'to' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-07-12T15:59:15.7818217-04:00 0HLO70CRCNS5A:00000002 [INF] Request finished in 57.6614ms 500 text/html; charset=utf-8 (791a596a)
+2019-07-12T16:00:09.8922808-04:00 0HLO70CRCNS5A:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T16:00:09.8948145-04:00 0HLO70CRCNS5A:00000003 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T16:00:09.8972250-04:00 0HLO70CRCNS5A:00000003 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T16:00:09.9018585-04:00 0HLO70CRCNS5A:00000003 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 1.6247ms (afa2e885)
+2019-07-12T16:00:09.9043869-04:00 0HLO70CRCNS5A:00000003 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T16:00:09.9106059-04:00 0HLO70CRCNS5A:00000003 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Could not create an instance of type 'System.Net.Mail.MailAddress'. Model bound complex types must not be abstract or value types and must have a parameterless constructor. Alternatively, give the 'to' parameter a non-null default value.
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.CreateModel(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinder.BindModelCoreAsync(ModelBindingContext bindingContext)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-07-12T16:00:09.9250353-04:00 0HLO70CRCNS5A:00000003 [INF] Request finished in 36.9039ms 500 text/html; charset=utf-8 (791a596a)
+2019-07-12T16:02:17.1050557-04:00  [INF] Starting @angular/cli on port 50963... (2aa54094)
+2019-07-12T16:02:17.7045158-04:00 0HLO70FBL3OLH:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T16:02:17.7045162-04:00 0HLO70FBL3OLI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T16:02:17.7431151-04:00 0HLO70FBL3OLH:00000001 [INF] Request finished in 49.0544ms 200  (791a596a)
+2019-07-12T16:02:17.9240409-04:00 0HLO70FBL3OLI:00000001 [INF] Request finished in 227.7328ms 301  (791a596a)
+2019-07-12T16:02:17.9289804-04:00 0HLO70FBL3OLH:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T16:02:18.1576672-04:00 0HLO70FBL3OLH:00000002 [INF] Request finished in 229.6361ms 200 text/html (791a596a)
+2019-07-12T16:02:18.2374732-04:00 0HLO70FBL3OLH:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T16:02:18.2516088-04:00 0HLO70FBL3OLJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T16:02:18.2516521-04:00 0HLO70FBL3OLI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T16:02:18.3915916-04:00 0HLO70FBL3OLI:00000002 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:02:18.3915915-04:00 0HLO70FBL3OLJ:00000001 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:02:18.3915916-04:00 0HLO70FBL3OLH:00000003 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:02:18.4587447-04:00 0HLO70FBL3OLI:00000002 [INF] Request finished in 156.3525ms 200 text/css (791a596a)
+2019-07-12T16:02:18.5142470-04:00 0HLO70FBL3OLH:00000003 [INF] Request finished in 184.9647ms 200 application/javascript (791a596a)
+2019-07-12T16:02:18.5418620-04:00 0HLO70FBL3OLJ:00000001 [INF] Request finished in 171.2369ms 200 application/javascript (791a596a)
+2019-07-12T16:02:19.1429937-04:00 0HLO70FBL3OLI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T16:02:19.1959709-04:00 0HLO70FBL3OLI:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:02:19.1996714-04:00 0HLO70FBL3OLI:00000003 [INF] Request finished in 58.0389ms 200 text/plain (791a596a)
+2019-07-12T16:02:20.4323605-04:00 0HLO70FBL3OLH:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T16:02:20.4459089-04:00 0HLO70FBL3OLH:00000004 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:02:20.4512234-04:00 0HLO70FBL3OLH:00000004 [INF] Request finished in 17.1513ms 200 text/plain (791a596a)
+2019-07-12T16:02:21.1380110-04:00 0HLO70FBL3OLJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T16:02:22.1305933-04:00 0HLO70FBL3OLJ:00000002 [INF] Request finished in 993.8443ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T16:02:31.1153333-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "50963"
+
+** Angular Live Development Server is listening on localhost:50963, open your browser on http://localhost:50963/ **
+ (31710531)
+2019-07-12T16:04:53.5493836-04:00  [INF] Starting @angular/cli on port 51005... (a8c43c53)
+2019-07-12T16:04:54.0940721-04:00 0HLO70GQ90SGD:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T16:04:54.0940663-04:00 0HLO70GQ90SGC:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T16:04:54.1467614-04:00 0HLO70GQ90SGC:00000001 [INF] Request finished in 60.7714ms 200  (791a596a)
+2019-07-12T16:04:54.2902293-04:00 0HLO70GQ90SGD:00000001 [INF] Request finished in 199.8259ms 301  (791a596a)
+2019-07-12T16:04:54.3030553-04:00 0HLO70GQ90SGC:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T16:04:54.4878749-04:00 0HLO70GQ90SGC:00000002 [INF] Request finished in 183.9285ms 200 text/html (791a596a)
+2019-07-12T16:04:54.5624073-04:00 0HLO70GQ90SGD:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T16:04:54.5679433-04:00 0HLO70GQ90SGC:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T16:04:54.5699790-04:00 0HLO70GQ90SGE:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T16:04:54.7433668-04:00 0HLO70GQ90SGC:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:04:54.7433667-04:00 0HLO70GQ90SGD:00000002 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:04:54.7662040-04:00 0HLO70GQ90SGE:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:04:54.7977033-04:00 0HLO70GQ90SGD:00000002 [INF] Request finished in 206.691ms 200 text/css (791a596a)
+2019-07-12T16:04:54.9159608-04:00 0HLO70GQ90SGC:00000003 [INF] Request finished in 198.7308ms 200 application/javascript (791a596a)
+2019-07-12T16:04:54.9287598-04:00 0HLO70GQ90SGE:00000001 [INF] Request finished in 205.7789ms 200 application/javascript (791a596a)
+2019-07-12T16:04:55.2634329-04:00 0HLO70GQ90SGD:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T16:04:55.4295280-04:00 0HLO70GQ90SGD:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:04:55.4353771-04:00 0HLO70GQ90SGD:00000003 [INF] Request finished in 194.9639ms 200 text/plain (791a596a)
+2019-07-12T16:04:56.9134410-04:00 0HLO70GQ90SGE:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T16:04:56.9317840-04:00 0HLO70GQ90SGE:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:04:56.9376436-04:00 0HLO70GQ90SGE:00000002 [INF] Request finished in 21.7814ms 200 text/plain (791a596a)
+2019-07-12T16:04:57.6765954-04:00 0HLO70GQ90SGC:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T16:04:58.9288845-04:00 0HLO70GQ90SGC:00000004 [INF] Request finished in 1239.1801ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T16:05:10.2777788-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "51005"
+
+** Angular Live Development Server is listening on localhost:51005, open your browser on http://localhost:51005/ **
+ (98660a84)
+2019-07-12T16:05:22.8171457-04:00 0HLO70GQ90SGD:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T16:05:22.9322126-04:00 0HLO70GQ90SGD:00000004 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T16:05:23.0354360-04:00 0HLO70GQ90SGD:00000004 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T16:05:23.2050432-04:00 0HLO70GQ90SGD:00000004 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["testing", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T16:08:26.7091837-04:00  [INF] Starting @angular/cli on port 51047... (459b7976)
+2019-07-12T16:08:27.2614489-04:00 0HLO70IPQ4IL2:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T16:08:27.2614488-04:00 0HLO70IPQ4IL3:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T16:08:27.2979045-04:00 0HLO70IPQ4IL2:00000001 [INF] Request finished in 36.4661ms 200  (791a596a)
+2019-07-12T16:08:27.4621076-04:00 0HLO70IPQ4IL3:00000001 [INF] Request finished in 204.4132ms 301  (791a596a)
+2019-07-12T16:08:27.4753742-04:00 0HLO70IPQ4IL2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T16:08:27.6328319-04:00 0HLO70IPQ4IL2:00000002 [INF] Request finished in 156.8423ms 200 text/html (791a596a)
+2019-07-12T16:08:27.6927470-04:00 0HLO70IPQ4IL3:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T16:08:27.6988927-04:00 0HLO70IPQ4IL2:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T16:08:27.7008819-04:00 0HLO70IPQ4IL4:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T16:08:27.8598504-04:00 0HLO70IPQ4IL4:00000001 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:08:27.8598503-04:00 0HLO70IPQ4IL2:00000003 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:08:27.8727346-04:00 0HLO70IPQ4IL3:00000002 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:08:27.8849562-04:00 0HLO70IPQ4IL2:00000003 [INF] Request finished in 187.5582ms 200 application/javascript (791a596a)
+2019-07-12T16:08:27.8921375-04:00 0HLO70IPQ4IL4:00000001 [INF] Request finished in 183.0112ms 200 application/javascript (791a596a)
+2019-07-12T16:08:27.9402758-04:00 0HLO70IPQ4IL3:00000002 [INF] Request finished in 190.0483ms 200 text/css (791a596a)
+2019-07-12T16:08:28.3560515-04:00 0HLO70IPQ4IL3:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T16:08:28.4484470-04:00 0HLO70IPQ4IL3:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:08:28.4542029-04:00 0HLO70IPQ4IL3:00000003 [INF] Request finished in 100.6937ms 200 text/plain (791a596a)
+2019-07-12T16:08:29.6651928-04:00 0HLO70IPQ4IL2:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T16:08:29.6776615-04:00 0HLO70IPQ4IL2:00000004 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:08:29.6858824-04:00 0HLO70IPQ4IL2:00000004 [INF] Request finished in 15.2815ms 200 text/plain (791a596a)
+2019-07-12T16:08:30.2716931-04:00 0HLO70IPQ4IL4:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T16:08:31.4465319-04:00 0HLO70IPQ4IL4:00000002 [INF] Request finished in 1163.0492ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T16:08:40.6659618-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "51047"
+
+** Angular Live Development Server is listening on localhost:51047, open your browser on http://localhost:51047/ **
+ (1b6b0f5b)
+2019-07-12T16:09:17.5379269-04:00  [INF] Date: 2019-07-12T20:09:17.530Z
+Hash: 44334d342d9ce0caff96
+Time: 36528ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (4fb50ab3)
+2019-07-12T16:09:17.6327681-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T16:09:43.3061128-04:00 0HLO70IPQ4IL5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T16:09:43.3758828-04:00 0HLO70IPQ4IL5:00000001 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T16:09:43.4378938-04:00 0HLO70IPQ4IL5:00000001 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T16:09:43.5052198-04:00 0HLO70IPQ4IL5:00000001 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["testing", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T16:12:46.3827033-04:00 0HLO70IPQ4IL5:00000001 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 182927.8612ms (afa2e885)
+2019-07-12T16:12:46.3905960-04:00 0HLO70IPQ4IL5:00000001 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T16:12:46.4635266-04:00 0HLO70IPQ4IL5:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The SMTP host was not specified.
+   at System.Net.Mail.SmtpClient.CheckHostAndPort()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at WApp.Api.Infraestructure.Core.Services.MessageService.SendText(MailMessage message, String phoneNumber)
+   at WApp.Api.Infraestructure.Core.Services.MessageService.GenerateMessage(String actionDescription, String phoneNumber, String to)
+   at WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage(String actionDescription, String phoneNumber, String emailAddress)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-07-12T16:12:46.6283267-04:00 0HLO70IPQ4IL5:00000001 [INF] Request finished in 183270.5272ms 500 text/html; charset=utf-8 (791a596a)
+2019-07-12T16:13:10.8613417-04:00 0HLO70IPQ4IL5:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T16:13:10.8693642-04:00 0HLO70IPQ4IL5:00000002 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T16:13:10.8723233-04:00 0HLO70IPQ4IL5:00000002 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T16:13:10.8762578-04:00 0HLO70IPQ4IL5:00000002 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["testing", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T16:18:29.2016809-04:00 0HLO70IPQ4IL5:00000002 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 318326.8384ms (afa2e885)
+2019-07-12T16:18:29.2043379-04:00 0HLO70IPQ4IL5:00000002 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T16:18:29.2150718-04:00 0HLO70IPQ4IL5:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at WApp.Api.Infraestructure.Core.Services.MessageService.SendText(MailMessage message, String phoneNumber)
+   at WApp.Api.Infraestructure.Core.Services.MessageService.GenerateMessage(String actionDescription, String phoneNumber, String to)
+   at WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage(String actionDescription, String phoneNumber, String emailAddress)
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-07-12T16:18:29.2406486-04:00 0HLO70IPQ4IL5:00000002 [INF] Request finished in 318378.85ms 500 text/html; charset=utf-8 (791a596a)
+2019-07-12T16:18:34.7737904-04:00 0HLO70IPQ4IL5:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T16:18:34.7768650-04:00 0HLO70IPQ4IL5:00000003 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T16:18:34.7805513-04:00 0HLO70IPQ4IL5:00000003 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T16:18:34.7832142-04:00 0HLO70IPQ4IL5:00000003 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["testing", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T16:31:39.7579947-04:00  [INF] Starting @angular/cli on port 54366... (0f79efdc)
+2019-07-12T16:31:40.2946152-04:00 0HLO70VOV0FUS:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T16:31:40.2946152-04:00 0HLO70VOV0FUR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T16:31:40.3332682-04:00 0HLO70VOV0FUS:00000001 [INF] Request finished in 40.5681ms 200  (791a596a)
+2019-07-12T16:31:40.5233781-04:00 0HLO70VOV0FUR:00000001 [INF] Request finished in 222.4151ms 301  (791a596a)
+2019-07-12T16:31:40.5447116-04:00 0HLO70VOV0FUS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T16:31:40.7087781-04:00 0HLO70VOV0FUS:00000002 [INF] Request finished in 163.5384ms 200 text/html (791a596a)
+2019-07-12T16:31:40.7672010-04:00 0HLO70VOV0FUR:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T16:31:40.7786442-04:00 0HLO70VOV0FUT:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T16:31:40.7805728-04:00 0HLO70VOV0FUS:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T16:31:41.0082372-04:00 0HLO70VOV0FUR:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:31:41.0364895-04:00 0HLO70VOV0FUS:00000003 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:31:41.1107528-04:00 0HLO70VOV0FUT:00000001 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:31:41.1396979-04:00 0HLO70VOV0FUR:00000002 [INF] Request finished in 257.2312ms 200 application/javascript (791a596a)
+2019-07-12T16:31:41.1439273-04:00 0HLO70VOV0FUS:00000003 [INF] Request finished in 274.2263ms 200 application/javascript (791a596a)
+2019-07-12T16:31:41.2119381-04:00 0HLO70VOV0FUT:00000001 [INF] Request finished in 348.435ms 200 text/css (791a596a)
+2019-07-12T16:31:41.4087003-04:00 0HLO70VOV0FUT:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T16:31:41.5543584-04:00 0HLO70VOV0FUT:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:31:41.5693473-04:00 0HLO70VOV0FUT:00000002 [INF] Request finished in 154.2552ms 200 text/plain (791a596a)
+2019-07-12T16:31:43.1715099-04:00 0HLO70VOV0FUS:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T16:31:43.1943980-04:00 0HLO70VOV0FUS:00000004 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:31:43.2001701-04:00 0HLO70VOV0FUS:00000004 [INF] Request finished in 26.8534ms 200 text/plain (791a596a)
+2019-07-12T16:31:43.8867019-04:00 0HLO70VOV0FUR:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T16:31:45.0041148-04:00 0HLO70VOV0FUR:00000003 [INF] Request finished in 1103.2657ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T16:31:55.6797894-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54366"
+
+** Angular Live Development Server is listening on localhost:54366, open your browser on http://localhost:54366/ **
+ (e5450098)
+2019-07-12T16:32:07.5548619-04:00 0HLO70VOV0FUT:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T16:32:07.6610480-04:00 0HLO70VOV0FUT:00000003 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T16:32:07.7408960-04:00 0HLO70VOV0FUT:00000003 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T16:32:07.8213723-04:00 0HLO70VOV0FUT:00000003 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["testing", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T16:32:22.9177727-04:00 0HLO70VOV0FUT:00000003 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 15070.117ms. (50a9e262)
+2019-07-12T16:32:22.9453155-04:00 0HLO70VOV0FUT:00000003 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T16:32:22.9703472-04:00 0HLO70VOV0FUT:00000003 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 15207.8267ms (afa2e885)
+2019-07-12T16:32:22.9767383-04:00 0HLO70VOV0FUT:00000003 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T16:32:23.0111156-04:00 0HLO70VOV0FUT:00000003 [INF] Request finished in 15427.6088ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T16:32:39.0945723-04:00  [INF] Date: 2019-07-12T20:32:39.084Z
+Hash: 44334d342d9ce0caff96
+Time: 42972ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (4e92d2d2)
+2019-07-12T16:32:39.1688682-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T16:36:06.0505735-04:00  [INF] Starting @angular/cli on port 54444... (43951246)
+2019-07-12T16:36:06.7014361-04:00 0HLO7128BA8AI:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T16:36:06.7014361-04:00 0HLO7128BA8AH:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T16:36:06.7449335-04:00 0HLO7128BA8AH:00000001 [INF] Request finished in 49.5387ms 200  (791a596a)
+2019-07-12T16:36:06.9794358-04:00 0HLO7128BA8AI:00000001 [INF] Request finished in 280.6362ms 301  (791a596a)
+2019-07-12T16:36:06.9904476-04:00 0HLO7128BA8AH:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T16:36:07.2374237-04:00 0HLO7128BA8AH:00000002 [INF] Request finished in 245.5178ms 200 text/html (791a596a)
+2019-07-12T16:36:07.3750968-04:00 0HLO7128BA8AI:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T16:36:07.3865661-04:00 0HLO7128BA8AH:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T16:36:07.3888529-04:00 0HLO7128BA8AJ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T16:36:07.5755556-04:00 0HLO7128BA8AH:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:36:07.5759685-04:00 0HLO7128BA8AI:00000002 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:36:07.6133330-04:00 0HLO7128BA8AJ:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:36:07.6694318-04:00 0HLO7128BA8AH:00000003 [INF] Request finished in 248.7302ms 200 application/javascript (791a596a)
+2019-07-12T16:36:07.6845728-04:00 0HLO7128BA8AI:00000002 [INF] Request finished in 258.1722ms 200 text/css (791a596a)
+2019-07-12T16:36:07.7152387-04:00 0HLO7128BA8AJ:00000001 [INF] Request finished in 268.5434ms 200 application/javascript (791a596a)
+2019-07-12T16:36:08.0983323-04:00 0HLO7128BA8AI:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T16:36:08.1616732-04:00 0HLO7128BA8AI:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:36:08.1668870-04:00 0HLO7128BA8AI:00000003 [INF] Request finished in 71.0745ms 200 text/plain (791a596a)
+2019-07-12T16:36:09.3295400-04:00 0HLO7128BA8AJ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T16:36:09.3485435-04:00 0HLO7128BA8AJ:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T16:36:09.3544603-04:00 0HLO7128BA8AJ:00000002 [INF] Request finished in 22.9177ms 200 text/plain (791a596a)
+2019-07-12T16:36:10.2054060-04:00 0HLO7128BA8AH:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T16:36:11.5302328-04:00 0HLO7128BA8AH:00000004 [INF] Request finished in 1346.1693ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T16:36:23.6477568-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54444"
+
+** Angular Live Development Server is listening on localhost:54444, open your browser on http://localhost:54444/ **
+ (7f04f585)
+2019-07-12T16:37:02.0937590-04:00  [INF] Date: 2019-07-12T20:37:02.087Z
+Hash: 44334d342d9ce0caff96
+Time: 38074ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (1c8250cd)
+2019-07-12T16:37:02.1756592-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T16:38:03.2157221-04:00 0HLO7128BA8AK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T16:38:03.3039376-04:00 0HLO7128BA8AK:00000001 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T16:38:03.3723089-04:00 0HLO7128BA8AK:00000001 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T16:38:03.4386268-04:00 0HLO7128BA8AK:00000001 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["testing", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T16:38:18.6787325-04:00 0HLO7128BA8AK:00000001 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 15192.4819ms. (50a9e262)
+2019-07-12T16:38:18.7019774-04:00 0HLO7128BA8AK:00000001 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T16:38:18.7204792-04:00 0HLO7128BA8AK:00000001 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 15332.5042ms (afa2e885)
+2019-07-12T16:38:18.7237652-04:00 0HLO7128BA8AK:00000001 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T16:38:18.7298213-04:00 0HLO7128BA8AK:00000001 [INF] Request finished in 15511.032ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:00:19.7138898-04:00  [INF] Starting @angular/cli on port 54592... (105ab26a)
+2019-07-12T17:00:20.2725882-04:00 0HLO71FPHQB93:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:00:20.2698208-04:00 0HLO71FPHQB92:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:00:20.3069038-04:00 0HLO71FPHQB92:00000001 [INF] Request finished in 43.2486ms 200  (791a596a)
+2019-07-12T17:00:20.4653619-04:00 0HLO71FPHQB93:00000001 [INF] Request finished in 202.4852ms 301  (791a596a)
+2019-07-12T17:00:20.4778457-04:00 0HLO71FPHQB92:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:00:20.6377597-04:00 0HLO71FPHQB92:00000002 [INF] Request finished in 162.2458ms 200 text/html (791a596a)
+2019-07-12T17:00:20.6889928-04:00 0HLO71FPHQB93:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:00:20.6922318-04:00 0HLO71FPHQB92:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:00:20.7071674-04:00 0HLO71FPHQB94:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:00:20.8133621-04:00 0HLO71FPHQB94:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:00:20.8133621-04:00 0HLO71FPHQB92:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:00:20.8216469-04:00 0HLO71FPHQB93:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:00:20.8814913-04:00 0HLO71FPHQB92:00000003 [INF] Request finished in 139.1063ms 200 text/css (791a596a)
+2019-07-12T17:00:20.9140144-04:00 0HLO71FPHQB94:00000001 [INF] Request finished in 131.6082ms 200 application/javascript (791a596a)
+2019-07-12T17:00:20.9435904-04:00 0HLO71FPHQB93:00000002 [INF] Request finished in 141.1727ms 200 application/javascript (791a596a)
+2019-07-12T17:00:21.3270290-04:00 0HLO71FPHQB92:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:00:21.3983677-04:00 0HLO71FPHQB92:00000004 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:00:21.4041468-04:00 0HLO71FPHQB92:00000004 [INF] Request finished in 75.5981ms 200 text/plain (791a596a)
+2019-07-12T17:00:22.6268921-04:00 0HLO71FPHQB94:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:00:22.6479146-04:00 0HLO71FPHQB94:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:00:22.6582671-04:00 0HLO71FPHQB94:00000002 [INF] Request finished in 25.1827ms 200 text/plain (791a596a)
+2019-07-12T17:00:23.2152385-04:00 0HLO71FPHQB93:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:00:24.3184732-04:00 0HLO71FPHQB93:00000003 [INF] Request finished in 1098.5147ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:00:32.9650317-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54592"
+
+** Angular Live Development Server is listening on localhost:54592, open your browser on http://localhost:54592/ **
+ (9fc884af)
+2019-07-12T17:00:57.6382190-04:00  [INF] Date: 2019-07-12T21:00:57.633Z
+Hash: 44334d342d9ce0caff96
+Time: 24325ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (5e88d7e6)
+2019-07-12T17:00:57.6934758-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T17:01:47.6048538-04:00 0HLO71FPHQB95:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T17:01:47.6721131-04:00 0HLO71FPHQB95:00000001 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:01:47.7518297-04:00 0HLO71FPHQB95:00000001 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:01:47.8166604-04:00 0HLO71FPHQB95:00000001 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["testing", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:01:48.0332686-04:00 0HLO71FPHQB96:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=testing&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T17:01:48.0442103-04:00 0HLO71FPHQB96:00000001 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:01:48.0497843-04:00 0HLO71FPHQB96:00000001 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:01:48.0704655-04:00 0HLO71FPHQB96:00000001 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["testing", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:07:11.6427689-04:00  [INF] Starting @angular/cli on port 54646... (4e7ed3a7)
+2019-07-12T17:07:12.0979833-04:00 0HLO71JK987BL:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:07:12.0979833-04:00 0HLO71JK987BM:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:07:12.1404393-04:00 0HLO71JK987BM:00000001 [INF] Request finished in 46.975ms 200  (791a596a)
+2019-07-12T17:07:12.2919785-04:00 0HLO71JK987BL:00000001 [INF] Request finished in 198.9752ms 301  (791a596a)
+2019-07-12T17:07:12.3017839-04:00 0HLO71JK987BM:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:07:12.5298590-04:00 0HLO71JK987BM:00000002 [INF] Request finished in 229.3674ms 200 text/html (791a596a)
+2019-07-12T17:07:12.5925912-04:00 0HLO71JK987BM:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:07:12.6013063-04:00 0HLO71JK987BL:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:07:12.6036754-04:00 0HLO71JK987BN:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:07:12.7389716-04:00 0HLO71JK987BM:00000003 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:07:12.7391409-04:00 0HLO71JK987BL:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:07:12.7481147-04:00 0HLO71JK987BN:00000001 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:07:12.7648154-04:00 0HLO71JK987BM:00000003 [INF] Request finished in 170.2367ms 200 application/javascript (791a596a)
+2019-07-12T17:07:12.8075999-04:00 0HLO71JK987BN:00000001 [INF] Request finished in 174.089ms 200 text/css (791a596a)
+2019-07-12T17:07:12.8621130-04:00 0HLO71JK987BL:00000002 [INF] Request finished in 171.9323ms 200 application/javascript (791a596a)
+2019-07-12T17:07:13.3915697-04:00 0HLO71JK987BN:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:07:13.5102112-04:00 0HLO71JK987BN:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:07:13.5178813-04:00 0HLO71JK987BN:00000002 [INF] Request finished in 136.9869ms 200 text/plain (791a596a)
+2019-07-12T17:07:14.9815517-04:00 0HLO71JK987BM:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:07:15.0017618-04:00 0HLO71JK987BM:00000004 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:07:15.0127219-04:00 0HLO71JK987BM:00000004 [INF] Request finished in 23.0466ms 200 text/plain (791a596a)
+2019-07-12T17:07:15.7699346-04:00 0HLO71JK987BL:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:07:17.0359857-04:00 0HLO71JK987BL:00000003 [INF] Request finished in 1267.5973ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:07:27.6902680-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54646"
+
+** Angular Live Development Server is listening on localhost:54646, open your browser on http://localhost:54646/ **
+ (8ffad710)
+2019-07-12T17:08:05.0871218-04:00  [INF] Date: 2019-07-12T21:08:05.054Z
+Hash: 44334d342d9ce0caff96
+Time: 36965ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (e37bf437)
+2019-07-12T17:08:05.1480891-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T17:08:18.9100622-04:00 0HLO71JK987BO:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=test&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T17:08:18.9802402-04:00 0HLO71JK987BO:00000001 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:08:19.0391114-04:00 0HLO71JK987BO:00000001 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:08:19.1220155-04:00 0HLO71JK987BO:00000001 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["test", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:08:45.6733167-04:00 0HLO71JK987BO:00000001 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 26533.7525ms. (50a9e262)
+2019-07-12T17:08:45.7047695-04:00 0HLO71JK987BO:00000001 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:08:45.7242390-04:00 0HLO71JK987BO:00000001 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 26670.0345ms (afa2e885)
+2019-07-12T17:08:45.7283073-04:00 0HLO71JK987BO:00000001 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:08:45.7355372-04:00 0HLO71JK987BO:00000001 [INF] Request finished in 26832.4575ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:09:43.8180651-04:00  [INF] Starting @angular/cli on port 54699... (e8007430)
+2019-07-12T17:09:44.5381816-04:00 0HLO71L1MBFF1:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:09:44.5381694-04:00 0HLO71L1MBFF0:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:09:44.5938806-04:00 0HLO71L1MBFF1:00000001 [INF] Request finished in 68.9919ms 200  (791a596a)
+2019-07-12T17:09:44.7862628-04:00 0HLO71L1MBFF0:00000001 [INF] Request finished in 256.5841ms 301  (791a596a)
+2019-07-12T17:09:44.7992520-04:00 0HLO71L1MBFF1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:09:45.0160147-04:00 0HLO71L1MBFF1:00000002 [INF] Request finished in 199.3622ms 200 text/html (791a596a)
+2019-07-12T17:09:45.1481321-04:00 0HLO71L1MBFF0:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:09:45.1744510-04:00 0HLO71L1MBFF1:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:09:45.1801969-04:00 0HLO71L1MBFF2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:09:45.4415872-04:00 0HLO71L1MBFF2:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:09:45.4415933-04:00 0HLO71L1MBFF1:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:09:45.4511768-04:00 0HLO71L1MBFF0:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:09:45.4798894-04:00 0HLO71L1MBFF1:00000003 [INF] Request finished in 344.6567ms 200 text/css (791a596a)
+2019-07-12T17:09:45.5449310-04:00 0HLO71L1MBFF2:00000001 [INF] Request finished in 330.7328ms 200 application/javascript (791a596a)
+2019-07-12T17:09:45.5998607-04:00 0HLO71L1MBFF0:00000002 [INF] Request finished in 358.2244ms 200 application/javascript (791a596a)
+2019-07-12T17:09:46.2086808-04:00 0HLO71L1MBFF1:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:09:46.2455492-04:00 0HLO71L1MBFF1:00000004 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:09:46.2535282-04:00 0HLO71L1MBFF1:00000004 [INF] Request finished in 40.5797ms 200 text/plain (791a596a)
+2019-07-12T17:09:47.7890589-04:00 0HLO71L1MBFF2:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:09:47.8039030-04:00 0HLO71L1MBFF2:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:09:47.8067814-04:00 0HLO71L1MBFF2:00000002 [INF] Request finished in 18.235ms 200 text/plain (791a596a)
+2019-07-12T17:09:48.4201360-04:00 0HLO71L1MBFF0:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:09:49.5366329-04:00 0HLO71L1MBFF0:00000003 [INF] Request finished in 1111.3497ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:09:58.0731659-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54699"
+
+** Angular Live Development Server is listening on localhost:54699, open your browser on http://localhost:54699/ **
+ (7dc05afb)
+2019-07-12T17:10:13.2868806-04:00 0HLO71L1MBFF1:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=teste&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T17:10:13.4100726-04:00 0HLO71L1MBFF1:00000005 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:10:13.4872300-04:00 0HLO71L1MBFF1:00000005 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:10:13.5566779-04:00 0HLO71L1MBFF1:00000005 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["teste", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:10:21.7332276-04:00 0HLO71L1MBFF1:00000005 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 8148.7757ms. (50a9e262)
+2019-07-12T17:10:21.7628244-04:00 0HLO71L1MBFF1:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:10:21.7774851-04:00 0HLO71L1MBFF1:00000005 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 8278.5994ms (afa2e885)
+2019-07-12T17:10:21.7813299-04:00 0HLO71L1MBFF1:00000005 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:10:21.7940799-04:00 0HLO71L1MBFF1:00000005 [INF] Request finished in 8498.5112ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:10:37.5920592-04:00  [INF] Date: 2019-07-12T21:10:37.583Z
+Hash: 44334d342d9ce0caff96
+Time: 39036ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (805a143a)
+2019-07-12T17:10:37.6814110-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T17:10:52.1222773-04:00 0HLO71L1MBFF1:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=teste&phoneNumber=7872447115   (ca22a1cb)
+2019-07-12T17:10:52.1338581-04:00 0HLO71L1MBFF1:00000006 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:10:52.1381828-04:00 0HLO71L1MBFF1:00000006 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:10:52.1418704-04:00 0HLO71L1MBFF1:00000006 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["teste", "7872447115", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:11:00.4290457-04:00 0HLO71L1MBFF1:00000006 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 8270.7146ms. (50a9e262)
+2019-07-12T17:11:00.4382620-04:00 0HLO71L1MBFF1:00000006 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:11:00.4454752-04:00 0HLO71L1MBFF1:00000006 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 8300.5402ms (afa2e885)
+2019-07-12T17:11:00.4496581-04:00 0HLO71L1MBFF1:00000006 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:11:00.4553787-04:00 0HLO71L1MBFF1:00000006 [INF] Request finished in 8333.9585ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:20:11.4182357-04:00  [INF] Starting @angular/cli on port 54767... (e6211ffd)
+2019-07-12T17:20:11.9669116-04:00 0HLO71QSMA73E:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:20:11.9669116-04:00 0HLO71QSMA73D:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:20:12.0043568-04:00 0HLO71QSMA73D:00000001 [INF] Request finished in 40.7411ms 200  (791a596a)
+2019-07-12T17:20:12.1713479-04:00 0HLO71QSMA73E:00000001 [INF] Request finished in 206.0201ms 301  (791a596a)
+2019-07-12T17:20:12.1839581-04:00 0HLO71QSMA73D:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:20:12.3421969-04:00 0HLO71QSMA73D:00000002 [INF] Request finished in 157.7515ms 200 text/html (791a596a)
+2019-07-12T17:20:12.4220174-04:00 0HLO71QSMA73E:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:20:12.4391762-04:00 0HLO71QSMA73D:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:20:12.4657478-04:00 0HLO71QSMA73F:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:20:12.6294123-04:00 0HLO71QSMA73E:00000002 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:20:12.6294049-04:00 0HLO71QSMA73F:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:20:12.7403836-04:00 0HLO71QSMA73D:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:20:12.7799369-04:00 0HLO71QSMA73F:00000001 [INF] Request finished in 300.0951ms 200 application/javascript (791a596a)
+2019-07-12T17:20:12.7845877-04:00 0HLO71QSMA73E:00000002 [INF] Request finished in 347.1376ms 200 text/css (791a596a)
+2019-07-12T17:20:12.7860210-04:00 0HLO71QSMA73D:00000003 [INF] Request finished in 330.1096ms 200 application/javascript (791a596a)
+2019-07-12T17:20:16.1375913-04:00 0HLO71QSMA73E:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:20:16.3628933-04:00 0HLO71QSMA73E:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:20:16.3703807-04:00 0HLO71QSMA73E:00000003 [INF] Request finished in 233.9355ms 200 text/plain (791a596a)
+2019-07-12T17:20:17.7580822-04:00 0HLO71QSMA73F:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:20:17.7851847-04:00 0HLO71QSMA73F:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:20:17.7922216-04:00 0HLO71QSMA73F:00000002 [INF] Request finished in 30.2823ms 200 text/plain (791a596a)
+2019-07-12T17:20:18.4924374-04:00 0HLO71QSMA73D:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:20:19.5482925-04:00 0HLO71QSMA73D:00000004 [INF] Request finished in 1060.4395ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:20:27.0791194-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54767"
+
+** Angular Live Development Server is listening on localhost:54767, open your browser on http://localhost:54767/ **
+ (7fa623ae)
+2019-07-12T17:20:38.1965467-04:00 0HLO71QSMA73E:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=test&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T17:20:38.2969375-04:00 0HLO71QSMA73E:00000004 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:20:38.3625745-04:00 0HLO71QSMA73E:00000004 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:20:38.4444209-04:00 0HLO71QSMA73E:00000004 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["test", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:20:41.1798910-04:00 0HLO71QSMA73E:00000004 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 2709.9611ms. (50a9e262)
+2019-07-12T17:20:41.2122211-04:00 0HLO71QSMA73E:00000004 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:20:41.2414302-04:00 0HLO71QSMA73E:00000004 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 2851.8743ms (afa2e885)
+2019-07-12T17:20:41.2583379-04:00 0HLO71QSMA73E:00000004 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:20:41.3010261-04:00 0HLO71QSMA73E:00000004 [INF] Request finished in 3066.6022ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:20:55.2062063-04:00 0HLO71QSMA73F:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=test&phoneNumber=7872447115   (ca22a1cb)
+2019-07-12T17:20:55.2201810-04:00 0HLO71QSMA73F:00000003 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:20:55.2262978-04:00 0HLO71QSMA73F:00000003 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:20:55.2333801-04:00 0HLO71QSMA73F:00000003 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["test", "7872447115", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:20:57.4691622-04:00 0HLO71QSMA73F:00000003 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 2228.9611ms. (50a9e262)
+2019-07-12T17:20:57.4881368-04:00 0HLO71QSMA73F:00000003 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:20:57.5070602-04:00 0HLO71QSMA73F:00000003 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 2262.0301ms (afa2e885)
+2019-07-12T17:20:57.5123512-04:00 0HLO71QSMA73F:00000003 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:20:57.5232900-04:00 0HLO71QSMA73F:00000003 [INF] Request finished in 2322.6911ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:21:03.0007024-04:00  [INF] Date: 2019-07-12T21:21:02.995Z
+Hash: 44334d342d9ce0caff96
+Time: 35533ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (222226b5)
+2019-07-12T17:21:03.0435348-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T17:21:46.3676111-04:00  [INF] Starting @angular/cli on port 54816... (5099750c)
+2019-07-12T17:21:47.0340692-04:00 0HLO71RP11H6S:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:21:47.0340691-04:00 0HLO71RP11H6T:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:21:47.0839084-04:00 0HLO71RP11H6T:00000001 [INF] Request finished in 68.6867ms 200  (791a596a)
+2019-07-12T17:21:47.3075181-04:00 0HLO71RP11H6S:00000001 [INF] Request finished in 285.6754ms 301  (791a596a)
+2019-07-12T17:21:47.3203846-04:00 0HLO71RP11H6T:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:21:47.5093828-04:00 0HLO71RP11H6T:00000002 [INF] Request finished in 186.9544ms 200 text/html (791a596a)
+2019-07-12T17:21:47.5839767-04:00 0HLO71RP11H6S:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:21:47.5861856-04:00 0HLO71RP11H6U:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:21:47.5925250-04:00 0HLO71RP11H6T:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:21:47.7441654-04:00 0HLO71RP11H6S:00000002 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:21:47.7451219-04:00 0HLO71RP11H6T:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:21:47.7792223-04:00 0HLO71RP11H6U:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:21:47.8142180-04:00 0HLO71RP11H6T:00000003 [INF] Request finished in 185.0876ms 200 application/javascript (791a596a)
+2019-07-12T17:21:47.8202225-04:00 0HLO71RP11H6U:00000001 [INF] Request finished in 202.3479ms 200 application/javascript (791a596a)
+2019-07-12T17:21:47.8305132-04:00 0HLO71RP11H6S:00000002 [INF] Request finished in 188.1977ms 200 text/css (791a596a)
+2019-07-12T17:21:48.9088323-04:00 0HLO71RP11H6S:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:21:49.0116207-04:00 0HLO71RP11H6S:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:21:49.0161599-04:00 0HLO71RP11H6S:00000003 [INF] Request finished in 110.4358ms 200 text/plain (791a596a)
+2019-07-12T17:21:50.3275113-04:00 0HLO71RP11H6U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:21:50.3532422-04:00 0HLO71RP11H6U:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:21:50.3593599-04:00 0HLO71RP11H6U:00000002 [INF] Request finished in 31.182ms 200 text/plain (791a596a)
+2019-07-12T17:21:51.1014069-04:00 0HLO71RP11H6T:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:21:52.4668454-04:00 0HLO71RP11H6T:00000004 [INF] Request finished in 1347.1844ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:22:02.8069734-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54816"
+
+** Angular Live Development Server is listening on localhost:54816, open your browser on http://localhost:54816/ **
+ (e672f505)
+2019-07-12T17:22:09.5888132-04:00 0HLO71RP11H6S:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=test&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T17:22:09.6927380-04:00 0HLO71RP11H6S:00000004 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:22:09.7853771-04:00 0HLO71RP11H6S:00000004 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:22:09.9101226-04:00 0HLO71RP11H6S:00000004 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["test", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:22:12.9849111-04:00 0HLO71RP11H6S:00000004 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 3053.4874ms. (50a9e262)
+2019-07-12T17:22:13.0116335-04:00 0HLO71RP11H6S:00000004 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:22:13.0257229-04:00 0HLO71RP11H6S:00000004 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 3226.1978ms (afa2e885)
+2019-07-12T17:22:13.0303375-04:00 0HLO71RP11H6S:00000004 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:22:13.0369127-04:00 0HLO71RP11H6S:00000004 [INF] Request finished in 3447.2821ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:22:22.9023935-04:00 0HLO71RP11H6U:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=test&phoneNumber=7872447115   (ca22a1cb)
+2019-07-12T17:22:22.9107400-04:00 0HLO71RP11H6U:00000003 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:22:22.9161637-04:00 0HLO71RP11H6U:00000003 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:22:22.9213369-04:00 0HLO71RP11H6U:00000003 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["test", "7872447115", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:22:25.1339883-04:00 0HLO71RP11H6U:00000003 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 2208.9169ms. (50a9e262)
+2019-07-12T17:22:25.1413514-04:00 0HLO71RP11H6U:00000003 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:22:25.1473510-04:00 0HLO71RP11H6U:00000003 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 2225.4045ms (afa2e885)
+2019-07-12T17:22:25.1529606-04:00 0HLO71RP11H6U:00000003 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:22:25.2247368-04:00 0HLO71RP11H6U:00000003 [INF] Request finished in 2255.2696ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:22:39.0169700-04:00  [INF] Date: 2019-07-12T21:22:39.012Z
+Hash: 44334d342d9ce0caff96
+Time: 35729ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (dc19cc96)
+2019-07-12T17:22:39.0735954-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T17:23:03.0465173-04:00  [INF] Starting @angular/cli on port 54861... (e5e54e11)
+2019-07-12T17:23:03.7350432-04:00 0HLO71SFSAB4N:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:23:03.7350432-04:00 0HLO71SFSAB4M:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:23:03.7771822-04:00 0HLO71SFSAB4N:00000001 [INF] Request finished in 49.0809ms 200  (791a596a)
+2019-07-12T17:23:03.9366657-04:00 0HLO71SFSAB4M:00000001 [INF] Request finished in 209.315ms 301  (791a596a)
+2019-07-12T17:23:03.9557401-04:00 0HLO71SFSAB4N:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:23:04.1197747-04:00 0HLO71SFSAB4N:00000002 [INF] Request finished in 169.7986ms 200 text/html (791a596a)
+2019-07-12T17:23:04.2011952-04:00 0HLO71SFSAB4M:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:23:04.2138509-04:00 0HLO71SFSAB4N:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:23:04.2171928-04:00 0HLO71SFSAB4O:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:23:04.4174126-04:00 0HLO71SFSAB4O:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:23:04.4174126-04:00 0HLO71SFSAB4M:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:23:04.4441224-04:00 0HLO71SFSAB4N:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:23:04.4598467-04:00 0HLO71SFSAB4M:00000002 [INF] Request finished in 235.4206ms 200 application/javascript (791a596a)
+2019-07-12T17:23:04.5619753-04:00 0HLO71SFSAB4N:00000003 [INF] Request finished in 246.6473ms 200 text/css (791a596a)
+2019-07-12T17:23:04.6080923-04:00 0HLO71SFSAB4O:00000001 [INF] Request finished in 225.6857ms 200 application/javascript (791a596a)
+2019-07-12T17:23:05.2460501-04:00 0HLO71SFSAB4N:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:23:05.3080090-04:00 0HLO71SFSAB4N:00000004 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:23:05.3174962-04:00 0HLO71SFSAB4N:00000004 [INF] Request finished in 67.8818ms 200 text/plain (791a596a)
+2019-07-12T17:23:06.5481229-04:00 0HLO71SFSAB4O:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:23:06.5639483-04:00 0HLO71SFSAB4O:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:23:06.5690076-04:00 0HLO71SFSAB4O:00000002 [INF] Request finished in 18.4534ms 200 text/plain (791a596a)
+2019-07-12T17:23:07.2699240-04:00 0HLO71SFSAB4M:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:23:08.3718877-04:00 0HLO71SFSAB4M:00000003 [INF] Request finished in 1099.5205ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:23:18.4999093-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54861"
+
+** Angular Live Development Server is listening on localhost:54861, open your browser on http://localhost:54861/ **
+ (3e3c8cc7)
+2019-07-12T17:23:23.0820230-04:00 0HLO71SFSAB4N:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=eureka&phoneNumber=7874048507   (ca22a1cb)
+2019-07-12T17:23:23.1727461-04:00 0HLO71SFSAB4N:00000005 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:23:23.2402617-04:00 0HLO71SFSAB4N:00000005 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:23:23.3207993-04:00 0HLO71SFSAB4N:00000005 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["eureka", "7874048507", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:23:25.9063083-04:00 0HLO71SFSAB4N:00000005 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 2566.472ms. (50a9e262)
+2019-07-12T17:23:25.9349428-04:00 0HLO71SFSAB4N:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:23:25.9526702-04:00 0HLO71SFSAB4N:00000005 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 2696.8221ms (afa2e885)
+2019-07-12T17:23:25.9573881-04:00 0HLO71SFSAB4N:00000005 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:23:25.9977324-04:00 0HLO71SFSAB4N:00000005 [INF] Request finished in 2878.4922ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:23:37.0597513-04:00 0HLO71SFSAB4O:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=eureka&phoneNumber=7872447115   (ca22a1cb)
+2019-07-12T17:23:37.0914415-04:00 0HLO71SFSAB4O:00000003 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:23:37.0995529-04:00 0HLO71SFSAB4O:00000003 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:23:37.1041531-04:00 0HLO71SFSAB4O:00000003 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["eureka", "7872447115", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:23:39.6118230-04:00 0HLO71SFSAB4O:00000003 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 2502.19ms. (50a9e262)
+2019-07-12T17:23:39.6163874-04:00 0HLO71SFSAB4O:00000003 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:23:39.6245117-04:00 0HLO71SFSAB4O:00000003 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 2517.4148ms (afa2e885)
+2019-07-12T17:23:39.6298065-04:00 0HLO71SFSAB4O:00000003 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:23:39.6371041-04:00 0HLO71SFSAB4O:00000003 [INF] Request finished in 2574.5266ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:24:27.7430105-04:00  [INF] Starting @angular/cli on port 54908... (1cef271c)
+2019-07-12T17:24:28.2688984-04:00 0HLO71T92SR77:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:24:28.2689056-04:00 0HLO71T92SR76:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:24:28.3155322-04:00 0HLO71T92SR77:00000001 [INF] Request finished in 57.4669ms 200  (791a596a)
+2019-07-12T17:24:28.5040817-04:00 0HLO71T92SR76:00000001 [INF] Request finished in 244.0757ms 301  (791a596a)
+2019-07-12T17:24:28.5113544-04:00 0HLO71T92SR77:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:24:28.6935456-04:00 0HLO71T92SR77:00000002 [INF] Request finished in 181.8172ms 200 text/html (791a596a)
+2019-07-12T17:24:28.7834576-04:00 0HLO71T92SR77:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:24:28.7873229-04:00 0HLO71T92SR76:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:24:28.7873417-04:00 0HLO71T92SR78:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:24:28.9268370-04:00 0HLO71T92SR78:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:24:28.9268426-04:00 0HLO71T92SR76:00000002 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:24:28.9268370-04:00 0HLO71T92SR77:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:24:28.9979085-04:00 0HLO71T92SR78:00000001 [INF] Request finished in 164.0717ms 200 application/javascript (791a596a)
+2019-07-12T17:24:29.0022623-04:00 0HLO71T92SR76:00000002 [INF] Request finished in 193.7075ms 200 text/css (791a596a)
+2019-07-12T17:24:29.0642285-04:00 0HLO71T92SR77:00000003 [INF] Request finished in 218.9651ms 200 application/javascript (791a596a)
+2019-07-12T17:24:29.3983901-04:00 0HLO71T92SR76:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:24:29.4440867-04:00 0HLO71T92SR76:00000003 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:24:29.4479552-04:00 0HLO71T92SR76:00000003 [INF] Request finished in 48.6239ms 200 text/plain (791a596a)
+2019-07-12T17:24:30.8145886-04:00 0HLO71T92SR78:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:24:30.8323970-04:00 0HLO71T92SR78:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:24:30.8368488-04:00 0HLO71T92SR78:00000002 [INF] Request finished in 24.2112ms 200 text/plain (791a596a)
+2019-07-12T17:24:31.5607861-04:00 0HLO71T92SR77:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:24:32.8418120-04:00 0HLO71T92SR77:00000004 [INF] Request finished in 1285.8607ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:24:41.0803165-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54908"
+
+** Angular Live Development Server is listening on localhost:54908, open your browser on http://localhost:54908/ **
+ (1954a45d)
+2019-07-12T17:25:19.3899111-04:00  [INF] Date: 2019-07-12T21:25:19.383Z
+Hash: 44334d342d9ce0caff96
+Time: 37871ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (8cd158c1)
+2019-07-12T17:25:19.4834847-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T17:25:49.7893945-04:00 0HLO71T92SR79:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=eureka&phoneNumber=7874048511   (ca22a1cb)
+2019-07-12T17:25:49.8574417-04:00 0HLO71T92SR79:00000001 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:25:49.9826365-04:00 0HLO71T92SR79:00000001 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:25:50.0612429-04:00 0HLO71T92SR79:00000001 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["eureka", "7874048511", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:25:52.7717984-04:00 0HLO71T92SR79:00000001 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 2670.0268ms. (50a9e262)
+2019-07-12T17:25:52.7959704-04:00 0HLO71T92SR79:00000001 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:25:52.8128869-04:00 0HLO71T92SR79:00000001 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 2815.9606ms (afa2e885)
+2019-07-12T17:25:52.8161774-04:00 0HLO71T92SR79:00000001 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:25:52.8195126-04:00 0HLO71T92SR79:00000001 [INF] Request finished in 3030.5968ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:26:35.1238258-04:00  [INF] Starting @angular/cli on port 54953... (83e8cc7f)
+2019-07-12T17:26:35.8197379-04:00 0HLO71UF3BR8G:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:26:35.8197379-04:00 0HLO71UF3BR8F:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:26:35.9050943-04:00 0HLO71UF3BR8F:00000001 [INF] Request finished in 95.8016ms 200  (791a596a)
+2019-07-12T17:26:36.0589812-04:00 0HLO71UF3BR8G:00000001 [INF] Request finished in 243.9651ms 301  (791a596a)
+2019-07-12T17:26:36.1182797-04:00 0HLO71UF3BR8F:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:26:36.3127805-04:00 0HLO71UF3BR8F:00000002 [INF] Request finished in 195.6101ms 200 text/html (791a596a)
+2019-07-12T17:26:36.3874517-04:00 0HLO71UF3BR8F:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:26:36.3973920-04:00 0HLO71UF3BR8G:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:26:36.4020758-04:00 0HLO71UF3BR8H:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:26:36.5912153-04:00 0HLO71UF3BR8H:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:26:36.5912088-04:00 0HLO71UF3BR8G:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:26:36.6191577-04:00 0HLO71UF3BR8F:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:26:36.6711518-04:00 0HLO71UF3BR8F:00000003 [INF] Request finished in 240.3185ms 200 text/css (791a596a)
+2019-07-12T17:26:36.7665790-04:00 0HLO71UF3BR8H:00000001 [INF] Request finished in 240.2994ms 200 application/javascript (791a596a)
+2019-07-12T17:26:36.8392290-04:00 0HLO71UF3BR8G:00000002 [INF] Request finished in 238.3529ms 200 application/javascript (791a596a)
+2019-07-12T17:26:37.5306408-04:00 0HLO71UF3BR8F:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:26:37.5724400-04:00 0HLO71UF3BR8F:00000004 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:26:37.5759870-04:00 0HLO71UF3BR8F:00000004 [INF] Request finished in 45.9336ms 200 text/plain (791a596a)
+2019-07-12T17:26:38.8490863-04:00 0HLO71UF3BR8H:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:26:38.8825201-04:00 0HLO71UF3BR8H:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:26:38.8994443-04:00 0HLO71UF3BR8H:00000002 [INF] Request finished in 38.1177ms 200 text/plain (791a596a)
+2019-07-12T17:26:39.5379002-04:00 0HLO71UF3BR8G:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:26:40.7391077-04:00 0HLO71UF3BR8G:00000003 [INF] Request finished in 1170.4454ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:26:51.9767613-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54953"
+
+** Angular Live Development Server is listening on localhost:54953, open your browser on http://localhost:54953/ **
+ (18db755f)
+2019-07-12T17:26:55.0774751-04:00 0HLO71UF3BR8F:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=eureka&phoneNumber=7874048511   (ca22a1cb)
+2019-07-12T17:26:55.2458702-04:00 0HLO71UF3BR8F:00000005 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:26:55.3269630-04:00 0HLO71UF3BR8F:00000005 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:26:55.4090254-04:00 0HLO71UF3BR8F:00000005 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["eureka", "7874048511", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:27:03.9483589-04:00 0HLO71UF3BR8F:00000005 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 8527.1293ms. (50a9e262)
+2019-07-12T17:27:03.9704571-04:00 0HLO71UF3BR8F:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:27:03.9868096-04:00 0HLO71UF3BR8F:00000005 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 8645.7219ms (afa2e885)
+2019-07-12T17:27:03.9903626-04:00 0HLO71UF3BR8F:00000005 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:27:04.0104992-04:00 0HLO71UF3BR8F:00000005 [INF] Request finished in 8920.9466ms 200 text/plain; charset=utf-8 (791a596a)
+2019-07-12T17:27:26.0243359-04:00  [INF] Date: 2019-07-12T21:27:26.016Z
+Hash: 44334d342d9ce0caff96
+Time: 33504ms
+chunk {main} main.js, main.js.map (main) 199 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 240 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {scripts} scripts.js, scripts.js.map (scripts) 396 kB  [rendered]
+chunk {styles} styles.css, styles.css.map (styles) 348 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 5.98 MB [initial] [rendered]
+ (0e4d2e68)
+2019-07-12T17:27:26.0945394-04:00  [INF] i ∩╜ówdm∩╜ú: Compiled successfully.
+ (29058622)
+2019-07-12T17:28:16.9832172-04:00  [INF] Starting @angular/cli on port 54996... (b45882f4)
+2019-07-12T17:28:17.6512573-04:00 0HLO71VDEGE6V:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger   (ca22a1cb)
+2019-07-12T17:28:17.6512573-04:00 0HLO71VDEGE6U:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:60413/  0 (ca22a1cb)
+2019-07-12T17:28:17.7058836-04:00 0HLO71VDEGE6U:00000001 [INF] Request finished in 63.3746ms 200  (791a596a)
+2019-07-12T17:28:17.9019518-04:00 0HLO71VDEGE6V:00000001 [INF] Request finished in 250.1072ms 301  (791a596a)
+2019-07-12T17:28:17.9155136-04:00 0HLO71VDEGE6U:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/index.html   (ca22a1cb)
+2019-07-12T17:28:18.1044769-04:00 0HLO71VDEGE6U:00000002 [INF] Request finished in 192.7981ms 200 text/html (791a596a)
+2019-07-12T17:28:18.1875333-04:00 0HLO71VDEGE6V:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js   (ca22a1cb)
+2019-07-12T17:28:18.1910438-04:00 0HLO71VDEGE6U:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui.css   (ca22a1cb)
+2019-07-12T17:28:18.1936717-04:00 0HLO71VDEGE70:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js   (ca22a1cb)
+2019-07-12T17:28:18.3621373-04:00 0HLO71VDEGE6U:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:28:18.3621373-04:00 0HLO71VDEGE6V:00000002 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:28:18.5092941-04:00 0HLO71VDEGE70:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:28:18.5370222-04:00 0HLO71VDEGE6V:00000002 [INF] Request finished in 199.5843ms 200 application/javascript (791a596a)
+2019-07-12T17:28:18.5403815-04:00 0HLO71VDEGE6U:00000003 [INF] Request finished in 196.3357ms 200 text/css (791a596a)
+2019-07-12T17:28:18.5876926-04:00 0HLO71VDEGE70:00000001 [INF] Request finished in 322.0765ms 200 application/javascript (791a596a)
+2019-07-12T17:28:18.9065129-04:00 0HLO71VDEGE6U:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-bundle.js.map   (ca22a1cb)
+2019-07-12T17:28:19.0000576-04:00 0HLO71VDEGE6U:00000004 [INF] Sending file. Request path: '"/swagger-ui-bundle.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:28:19.0069625-04:00 0HLO71VDEGE6U:00000004 [INF] Request finished in 99.5915ms 200 text/plain (791a596a)
+2019-07-12T17:28:20.3630086-04:00 0HLO71VDEGE70:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/swagger-ui-standalone-preset.js.map   (ca22a1cb)
+2019-07-12T17:28:20.4085331-04:00 0HLO71VDEGE70:00000002 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js.map"'. Physical path: '"N/A"' (27b0a520)
+2019-07-12T17:28:20.4156448-04:00 0HLO71VDEGE70:00000002 [INF] Request finished in 50.0374ms 200 text/plain (791a596a)
+2019-07-12T17:28:21.0474252-04:00 0HLO71VDEGE6V:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:44317/swagger/v1/swagger.json   (ca22a1cb)
+2019-07-12T17:28:22.1769647-04:00 0HLO71VDEGE6V:00000003 [INF] Request finished in 1125.5397ms 200 application/json;charset=utf-8 (791a596a)
+2019-07-12T17:28:31.9201065-04:00  [INF] > ZTime@0.0.0 start C:\Users\Rac1\source\repos\WApp\WApp\ClientApp
+> ng serve "--port" "54996"
+
+** Angular Live Development Server is listening on localhost:54996, open your browser on http://localhost:54996/ **
+ (816336c8)
+2019-07-12T17:28:43.8499500-04:00 0HLO71VDEGE6U:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:44317/api/v1/Messages/SendMessage?actionDescription=eureka&phoneNumber=7876717012   (ca22a1cb)
+2019-07-12T17:28:43.9608266-04:00 0HLO71VDEGE6U:00000005 [INF] Executing endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (500cc934)
+2019-07-12T17:28:44.0884574-04:00 0HLO71VDEGE6U:00000005 [INF] Route matched with "{action = \"SendMessage\", controller = \"Messages\", page = \"\"}". Executing action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" (a44c0341)
+2019-07-12T17:28:44.1708933-04:00 0HLO71VDEGE6U:00000005 [INF] Executing action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" with arguments (["eureka", "7876717012", ""]) - Validation state: Valid (4e3479ed)
+2019-07-12T17:28:48.7797235-04:00 0HLO71VDEGE6U:00000005 [INF] Executed action method "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 4595.3454ms. (50a9e262)
+2019-07-12T17:28:48.8068816-04:00 0HLO71VDEGE6U:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2019-07-12T17:28:48.8200378-04:00 0HLO71VDEGE6U:00000005 [INF] Executed action "WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)" in 4720.3639ms (afa2e885)
+2019-07-12T17:28:48.8232333-04:00 0HLO71VDEGE6U:00000005 [INF] Executed endpoint '"WApp.Api.Modules.OnlineStore.Controllers.MessagesController.SendMessage (WApp)"' (99874f2b)
+2019-07-12T17:28:48.8299695-04:00 0HLO71VDEGE6U:00000005 [INF] Request finished in 4977.984ms 200 text/plain; charset=utf-8 (791a596a)
