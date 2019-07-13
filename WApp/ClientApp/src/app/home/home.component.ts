@@ -7,6 +7,7 @@ import { Config } from 'protractor';
 import { Router } from '@angular/router';
 
 import { environment } from '../../environments/environment';
+import { InvoiceService } from '../services/invoice.service';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,8 @@ export class HomeComponent {
   @Output() paymentError: boolean;
   @Output() paymentSucceed: boolean;
   @Output() ProcessingPayment: boolean;
+  @Output() MessageNotSent: boolean;
+  @Output() MessageSent: boolean;
   @Output() fillInvoice = new EventEmitter<any>();
   @Output() clearCardFields = new EventEmitter<any>();
 
@@ -29,11 +32,13 @@ export class HomeComponent {
   private currentUrl:string;
   @Inject('BASE_URL') public accessPointUrl: string;
   configUrl = 'assets/config.json';
-  constructor(private http: HttpClient, private router: Router, @Inject('BASE_URL') baseUrl: string) {
+  constructor(public invoice: InvoiceService, private http: HttpClient, private router: Router, @Inject('BASE_URL') baseUrl: string) {
     this.currentUrl = baseUrl;
     this.paymentError = false;
     this.paymentSucceed = false;
     this.ProcessingPayment = false;
+    this.MessageNotSent = false;
+    this.MessageSent = false;
     this.headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
       'Stripe-Account':'acct_1EHCbXAdyX2SDB4E'
@@ -42,6 +47,12 @@ export class HomeComponent {
   getConfigResponse(): Observable<HttpResponse<Config>> {
     return this.http.get<Config>(
       this.configUrl, { observe: 'response' });
+  }
+  sendAsSMS(order: Order) {
+    console.log(order);
+    this.invoice.sendInvoice(order);
+    this.MessageNotSent = false;
+    this.MessageSent = true;
   }
   public payingOrder = function (paymentInfo: any) {
     this.paymentError = false;
@@ -56,16 +67,17 @@ export class HomeComponent {
           this.paymentError = true;
           this.paymentSucceed = false;
           this.ProcessingPayment = false;
+          this.MessageNotSent = false;
+          this.MessageSent = false;
         }
         else {
           this.paymentError = false;
           this.paymentSucceed = true;
           this.ProcessingPayment = false;
-          console.log(res);
+          this.MessageNotSent = true;
+          this.MessageSent = false;
           this.fillInvoice.emit(paymentInfo);
-          console.log(res.objectValue);
           this.order = res.objectValue;
-          console.log(this.order);
           this.clearCardFields.emit();
         }
       });

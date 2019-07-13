@@ -23,9 +23,9 @@ export class Interceptor implements HttpInterceptor {
     // Pass on the cloned request instead of the original request.
     return next.handle(authReq).pipe(map(event => {
       if (event instanceof HttpResponse && ~~(event.status / 100) > 3) {
-        console.info('HttpResponse::event =', event, ';');
+        //console.info('HttpResponse::event =', event, ';');
       }
-      else console.info('event =', event, ';');
+      else //console.info('event =', event, ';');
       return event;
     })
       );

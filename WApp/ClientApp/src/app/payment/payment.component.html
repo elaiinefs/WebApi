@@ -48,7 +48,7 @@
               </div>
               <div class="col-6">
                 <input class="form-control" placeholder="Phone"
-                       required type="number" [(ngModel)]="uPhone" maxlength="50" />
+                       required type="number" [(ngModel)]="uPhone" minlength="10" maxlength="10" />
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@
             <div class="input-group">
               <div class="col-12">
                 <span class="req-fld">*</span>
-                <input (change)="fillCardData($event)" type="number" class="form-control" id="cardNumber" placeholder="Valid Card Number / Scan Card Here"
+                <input (change)="fillCardData($event)" type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number / Scan Card Here"
                        required [(ngModel)]="cNumber" #cNumberA="ngModel" maxlength="25" />
                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
               </div>

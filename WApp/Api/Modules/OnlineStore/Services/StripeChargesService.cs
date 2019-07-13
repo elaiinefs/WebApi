@@ -35,6 +35,7 @@ namespace WApp.Api.Modules.OnlineStore.Services
         public Charge CreateCharge(ChargeCreateOptions options)
         {
             var service = new ChargeService();
+            service.ExpandCustomer = true;
             Charge charge = service.Create(options);// This will do the Payment
             return charge;
         }

@@ -44,6 +44,11 @@ main {
   border: solid #289292 3px;
   color: #289292;
 }
+.tertiary-btn-c {
+  color: #289292;
+  border:none;
+  background-color:white;
+}
 #printable-invoice {
   margin-top: 15px;
 }

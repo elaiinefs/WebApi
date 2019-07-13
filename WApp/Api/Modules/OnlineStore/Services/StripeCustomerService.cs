@@ -43,6 +43,7 @@ namespace WApp.Api.Modules.OnlineStore.Services
             {
                 Stripe.CustomerCreateOptions myCustomer = new CustomerCreateOptions();
                 myCustomer.Email = paymentInfo.Buyer_Email;
+                myCustomer.Phone = paymentInfo.PhoneNumber;
                 myCustomer.Source = newToken.Id;
                 var customerService = new CustomerService();
                 stripeCustomer = customerService.Create(myCustomer);

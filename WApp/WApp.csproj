@@ -40,7 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Api\Infraestructure\Core\Controllers\v1\" />
     <Folder Include="Api\Modules\OnlineStore\Data\" />
     <Folder Include="Api\Modules\OnlineStore\Repositories\" />
   </ItemGroup>
