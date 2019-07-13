@@ -21,18 +21,18 @@
     </div>
   </div>
   <div class="row" *ngIf="paymentSucceed">
-    <div classs="col-12">
-    <div class="col-6" *ngIf="MessageNotSent && order.customer.phone">
-      <button class="btn secondary-btn-c" (click)="sendAsSMS(order)">Send Receipt as Message</button>
-    </div>
-    <div class="col-6" *ngIf="MessageSent">
-      <div *ngIf="paymentSucceed" class="alert alert-success btn-block">
-        Message sent!
+    <div class="col-12">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="col-6">
+            <button *ngIf="MessageNotSent && order.customer.phone" class="btn secondary-btn-c" (click)="sendAsSMS(order)">Send Receipt as Message</button>
+            <div *ngIf="paymentSucceed && MessageSent" class="alert alert-success btn-block">Message sent!</div>
+          </div>
+          <div class="col-6">
+            <button class="btn tertiary-btn-c" printTitle="Receipt" [useExistingCss]="true" printSectionId="printable-invoice" ngxPrint>print receipt</button>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-    <div class="col-6">
-      <button class="btn tertiary-btn-c" printTitle="Receipt" [useExistingCss]="true" printSectionId="printable-invoice" ngxPrint>print receipt</button>
     </div>
   </div>
   <div class="col-md-4">
@@ -42,9 +42,9 @@
           <div class="row expanded">
             <main class="columns">
               <div class="col-12">
-                
+
               </div>
-                                          <div class="col-12">
+              <div class="col-12">
                 <section class="row" id="printable-invoice">
                   <table>
                     <tr>
