@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Config } from 'protractor';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class InvoiceService {
   constructor(private http: HttpClient, private router: Router, @Inject('BASE_URL') baseUrl: string) {
     this.currentUrl = baseUrl;
   }
-  public sendInvoice(order) {
+  public sendInvoice = function (order: any) {
     var receipt: Receipt;
     receipt = {
       description: order.description,
@@ -29,9 +30,10 @@ export class InvoiceService {
       email: order.billing_details.email,
       phoneNumber: order.customer.phone,
     }
-    return this.http.post(environment.apiEndpoint + 'api/v1/Messages/Send', receipt, { headers: this.headers })
-      .subscribe(
-        res => { });
+      return this.http.post(environment.apiEndpoint + 'api/v1/Messages/Send', receipt, { headers: this.headers })
+        .pipe(map((res: Response) => {
+          return res.status;
+      }));
   }
 }
 interface Receipt {

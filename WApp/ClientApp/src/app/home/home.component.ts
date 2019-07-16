@@ -49,10 +49,17 @@ export class HomeComponent {
       this.configUrl, { observe: 'response' });
   }
   sendAsSMS(order: Order) {
-    console.log(order);
-    this.invoice.sendInvoice(order);
-    this.MessageNotSent = false;
-    this.MessageSent = true;
+    this.invoice.sendInvoice(order).subscribe(data => {
+      if (data = "success") {
+        this.MessageNotSent = false;
+        this.MessageSent = true;
+      }
+      else {
+        this.MessageNotSent = true;
+        this.MessageSent = false;
+      }
+    });
+    
   }
   public payingOrder = function (paymentInfo: any) {
     this.paymentError = false;

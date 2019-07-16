@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Stripe;
 using WApp.Api.Infraestructure.Core.Interfaces;
+using WApp.Api.Infraestructure.Core.Services;
 
 namespace WApp.Api.Infraestructure.Core.Controllers
 {
@@ -11,16 +13,26 @@ namespace WApp.Api.Infraestructure.Core.Controllers
     public class MessagesController : Controller
     {
         public readonly IMessageService _messageService;
-        public MessagesController(IMessageService messageService)
+        private readonly IErrorHandlerService _errorService;
+
+        public MessagesController(IMessageService messageService, IErrorHandlerService errorService)
         {
             _messageService = messageService;
+            _errorService = errorService;
         }
         [HttpPost, Route("Send")]
-        public string Send([FromBody]Receipt payment = null, string actionDescription = "", string phoneNumber = "", string emailAddress = null) 
+        public IActionResult Send([FromBody]Receipt payment = null, string actionDescription = "", string phoneNumber = "", string emailAddress = null) 
         {
-            _messageService.GenerateMessage(actionDescription, payment, phoneNumber, emailAddress);
-            return "sent";
-
+            try
+            {
+                _messageService.GenerateMessage(actionDescription, payment, phoneNumber, emailAddress);
+                return Json(new { status = "success", message = "Message sent."});
+            }
+            catch (Exception e)
+            {
+                _errorService.LogError(e);
+                return Json(new { status = "error", message = "Message not sent.."});
+            }
         }
     }
 }

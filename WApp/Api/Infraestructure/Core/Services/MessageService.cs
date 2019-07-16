@@ -8,14 +8,7 @@ namespace WApp.Api.Infraestructure.Core.Services
 {
     public class MessageService : IMessageService
     {
-        private readonly ILogger _logger;
-        private readonly IErrorHandlerService _errorService;
 
-        public MessageService(ILogger<MessageService> logger, IErrorHandlerService errorService)
-        {
-            _logger = logger;
-            _errorService = errorService;
-        }
         public MailMessage GenerateMessage(string actionDescription, Receipt payment = null, string phoneNumber = "", string to = "")
         {
             MailMessage mm = new MailMessage();
@@ -25,8 +18,7 @@ namespace WApp.Api.Infraestructure.Core.Services
             mm.Subject = "Zaraii Pay- " + actionDescription;
             
             SmtpClient client = SetClient();
-            try
-            {
+            
                 if (payment.PhoneNumber != ""&& payment.PhoneNumber!= null)
                 {
                     mm.Subject = "";
@@ -38,12 +30,7 @@ namespace WApp.Api.Infraestructure.Core.Services
                     mm.Body = GetHtmlBody(payment);
                     //SendEmail(mm, client, new MailAddress(to));
                 }
-            }
-            catch (Exception e)
-            {
-                _errorService.LogError(e);
-                throw;
-            }
+            
             return mm;
         }
         private SmtpClient SetClient()
