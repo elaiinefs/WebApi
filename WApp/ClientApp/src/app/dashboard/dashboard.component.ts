@@ -15,7 +15,7 @@ export class DashboardComponent {
   public curr:string;
   private headers: HttpHeaders;
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+  constructor(http: HttpClient) {
     http.get<ordersByMonth>(environment.apiEndpoint + 'api/v1/Summaries/Charges', { headers: this.headers }).subscribe(result => {
       this.ordersData = result;
       this.updateOrderData(result);

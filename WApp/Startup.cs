@@ -23,6 +23,8 @@ using WApp.Api.Modules.OnlineStore.Services;
 using WApp.Api.Infraestructure.Core.Services;
 using Microsoft.Extensions.Logging;
 using WApp.Api.Infraestructure.Core.Interfaces;
+using WApp.Api.Modules.Poll.Interfaces;
+using WApp.Api.Modules.Poll.Services;
 
 namespace WApp
 {
@@ -75,6 +77,7 @@ namespace WApp
             services.AddScoped<IStripeCustomerService, StripeCustomerService>();
             services.AddScoped<IStripeChargesService, StripeChargesService>();
             services.AddScoped<IMessageService, MessageService>();
+            services.AddScoped<IVoteService, VoteService>();
             services.AddSwaggerGen(c =>
             {
 

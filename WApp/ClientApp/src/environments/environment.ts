@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://localhost:44317/',
+  apiEndpoint: 'https://www.codepower.io/',
   clientUrl:'https://localhost:44317/'
   //production: true,
   //apiEndpoint: 'http://zaraiipay-001-site1.htempurl.com/'

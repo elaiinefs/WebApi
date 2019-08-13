@@ -10,7 +10,6 @@ import { Params, ActivatedRoute } from '@angular/router';
 export class AuthComponent implements OnInit {
   private headers: HttpHeaders;
   private code: string;
-  private currentUrl:string;
   public message: any;
   private stripeParams = {
     UserId: undefined,
@@ -23,9 +22,8 @@ export class AuthComponent implements OnInit {
     application_fee_amount: ""
   }
 
-  constructor(private http: HttpClient, private route: ActivatedRoute, @Inject('BASE_URL') baseUrl: string) {
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
     this.headers = new HttpHeaders({ 'Content-Type': 'application/json; charset=utf-8' });
-    this.currentUrl = baseUrl;
   }
 
   ngOnInit() {
@@ -44,7 +42,7 @@ export class AuthComponent implements OnInit {
       currency: "",
       application_fee_amount: ""
     }
-    return this.http.post(this.currentUrl+'api/Connect/ConnectWithStripe', this.stripeParams, { headers: this.headers })
+    return this.http.post('api/Connect/ConnectWithStripe', this.stripeParams, { headers: this.headers })
       .subscribe((res: Response) => {
         // you can assign the value to any variable here
       });

@@ -23,6 +23,7 @@ namespace WApp.Api.Infraestructure.Data.Entities
         public virtual DbSet<Brand> Brand { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<CompInfo> CompInfo { get; set; }
+        public virtual DbSet<Counts> Counts { get; set; }
         public virtual DbSet<Coupon> Coupon { get; set; }
         public virtual DbSet<CustInfo> CustInfo { get; set; }
         public virtual DbSet<CustMonthlyAct> CustMonthlyAct { get; set; }
@@ -172,6 +173,15 @@ namespace WApp.Api.Infraestructure.Data.Entities
                 entity.Property(e => e.Zcode)
                     .HasColumnName("zcode")
                     .HasMaxLength(10);
+            });
+
+            modelBuilder.Entity<Counts>(entity =>
+            {
+                entity.Property(e => e.Total);
+
+                entity.Property(e => e.Name).HasMaxLength(50);
+
+                entity.Property(e => e.LastUpdated);
             });
 
             modelBuilder.Entity<Coupon>(entity =>

@@ -12,7 +12,6 @@ import { JwtHelperService } from 'auth0-js';
 (window as any).global = window;
 @Injectable()
 export class AuthService {
-  public currentUrl: string;
   public paymentInfo: any;
   private decoder: JwtHelperService;
   auth0 = new auth0.WebAuth({
@@ -23,8 +22,7 @@ export class AuthService {
     scope: 'openid email profile'
   });
 
-  constructor(public router: Router, @Inject('BASE_URL') baseUrl: string, private http: HttpClient) {
-    this.currentUrl = baseUrl;
+  constructor(public router: Router, private http: HttpClient) {
   }
 
   public login(): void {

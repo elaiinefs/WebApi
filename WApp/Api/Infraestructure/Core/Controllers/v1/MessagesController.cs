@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Mail;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Stripe;
@@ -9,7 +10,9 @@ using WApp.Api.Infraestructure.Core.Services;
 
 namespace WApp.Api.Infraestructure.Core.Controllers
 {
+    
     [Route("api/v1/[controller]")]
+    [Authorize]
     public class MessagesController : Controller
     {
         public readonly IMessageService _messageService;

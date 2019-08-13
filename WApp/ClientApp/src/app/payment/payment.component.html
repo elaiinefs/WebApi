@@ -18,8 +18,8 @@
                 <span class="hide-small">Sub Total</span>
                 <div class="col-12">
                   <span class="req-fld">*</span>
-                  <input type="number" maxlength="50" class="form-control" placeholder="Total ($)"
-                         (change)="calculateTotal($event)" [(ngModel)]="subTotal" #subTotalA="ngModel" required pattern="^[1-9]\d*$"/>
+                  <input type="number" pattern="^\d*(\.\d{0,2})?$" maxlength="50" class="form-control" placeholder="Total ($)"
+                         (change)="calculateTotal($event)" [(ngModel)]="subTotal" #subTotalA="ngModel" required/>
                 </div>
                 <div *ngIf="subTotalA.invalid && subTotalA.touched">
                   <label class="error-msg">Amount is required.</label>
@@ -86,7 +86,7 @@
               <div class="col-12">
                 <span class="req-fld">*</span>
                 <input (change)="fillCardData($event)" type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number / Scan Card Here"
-                       required [(ngModel)]="cNumber" #cNumberA="ngModel" maxlength="25" />
+                       required [(ngModel)]="cNumber" #cNumberA="ngModel" />
                 <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
               </div>
             </div>
@@ -150,7 +150,7 @@
       <div class="p-2">
         <ul class="nav nav-pills nav-stacked">
           <li class="active">
-            <a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>{{total}}</span> Payment Total</a>
+            <a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd">$</span>{{total}}</span> Payment Total</a>
           </li>
         </ul>
       </div>

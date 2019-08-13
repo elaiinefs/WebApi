@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiEndpoint: 'http://zaraiipay-001-site1.htempurl.com/',
-  clientUrl: 'http://zaraiipay-001-site1.htempurl.com/'
+  apiEndpoint: 'https://www.codepower.io/',
+  clientUrl: 'https://zaraiipay.firebaseapp.com/'
 };

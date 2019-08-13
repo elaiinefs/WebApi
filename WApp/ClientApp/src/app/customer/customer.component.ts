@@ -1,5 +1,6 @@
 import { Component, Inject } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-customer',
@@ -9,9 +10,9 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 export class CustomerComponent{
   public customers: Customers[];
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+  constructor(http: HttpClient) {
 
-    http.get<Customers[]>(baseUrl +'api/v1/Customers/List').subscribe(result => {
+    http.get<Customers[]>(environment.apiEndpoint +'api/v1/Customers/List').subscribe(result => {
       this.customers = result;
     }, error => console.error(error));
   }

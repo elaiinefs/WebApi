@@ -14,19 +14,18 @@ export class ChargesComponent {
   public orders: Observable<Order[]>;
   public refund: RefundInfo;
 
-  constructor(private http: HttpClient,@Inject('BASE_URL') private baseUrl: string, private messageService: MessageService) {
-    this.getLoggedInUser(baseUrl);
+  constructor(private http: HttpClient, private messageService: MessageService) {
+    this.getLoggedInUser(environment.apiEndpoint);
     http.get<Observable<Order[]>>(environment.apiEndpoint + 'api/v1/Orders/List').subscribe(result => {
-      console.error(result);
       this.orders = result;
     }, error => console.error(error));
   }
-  getLoggedInUser(baseUrl): Observable<any> {
+  getLoggedInUser(apiUrl): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + localStorage.getItem('token')
     });
-    return this.http.get(baseUrl + 'api/Orders/List', { headers: headers })
+    return this.http.get(apiUrl + 'api/Orders/List', { headers: headers })
   }
   ngOnInit() {
   }
@@ -56,7 +55,7 @@ export class ChargesComponent {
   }
   public async refundingOrder() {
 
-    await this.http.post(this.baseUrl + 'api/Order/Refund', this.refund )
+    await this.http.post(environment.apiEndpoint + 'api/Order/Refund', this.refund )
       .subscribe(
         res => {
         }, error => console.error(error));
