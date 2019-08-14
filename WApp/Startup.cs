@@ -109,11 +109,6 @@ namespace WApp
                 options.Cookie.HttpOnly = true;
             });
             
-            // In production, the Angular files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/dist";
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -139,10 +134,9 @@ namespace WApp
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseCors(x => x.WithOrigins("http://localhost:44352", "https://localhost:44317", "http://zaraiipay-001-site1.htempurl.com", "https://zaraiipay.firebaseapp.com").AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(x => x.WithOrigins("").AllowAnyMethod().AllowAnyHeader());
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
@@ -152,26 +146,12 @@ namespace WApp
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
-
-            app.UseSpa(spa =>
-            {
-                // To learn more about options for serving an Angular SPA from ASP.NET Core,
-                // see https://go.microsoft.com/fwlink/?linkid=864501
-
-                spa.Options.SourcePath = "ClientApp";
-
-                if (env.IsDevelopment())
-                {
-                    spa.UseAngularCliServer(npmScript: "start");
-                }
-            });
+;
             app.UseStatusCodePages(async context => {
                 var request = context.HttpContext.Request;
                 var response = context.HttpContext.Response;
 
                 if (response.StatusCode == (int)HttpStatusCode.Unauthorized)
-                // you may also check requests path to do this only for specific methods       
-                // && request.Path.Value.StartsWith("/specificPath")
 
                 {
                     response.Redirect("/");
